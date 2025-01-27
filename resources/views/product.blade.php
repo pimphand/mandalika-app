@@ -5,9 +5,9 @@
             <div class="card-body">
                 <div class="product-gallery-wrapper">
                     <div class="product-gallery gallery-img">
-                        <a href="{{config('app.api_url')}}/{{$product['data']['image']}}" class="image-zooming-in-out" title="Product One"
+                        <a href="{{config('app.api_url')}}/storage/{{$product['data']['image']}}" class="image-zooming-in-out" title="Product One"
                            data-gall="gallery2">
-                            <img class="" src="{{config('app.api_url')}}/{{$product['data']['image']}}" alt="">
+                            <img class="" src="{{config('app.api_url')}}/storage/{{$product['data']['image']}}" alt="">
                         </a>
                     </div>
                 </div>
@@ -48,7 +48,7 @@
                                 <div class="card-body p-3">
                                     <!-- Product Thumbnail -->
                                     <a class="product-thumbnail d-block" href="{{route('product',$recomended['id'])}}">
-                                        <img src="{{config('app.api_url')}}/{{$recomended['image']}}" alt="">
+                                        <img src="{{config('app.api_url')}}/storage/{{$recomended['image']}}" alt="">
                                         <!-- Badge -->
                                     </a>
                                     <!-- Product Title -->

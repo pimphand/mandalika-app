@@ -111,7 +111,7 @@
                                 <div class="card-body p-3">
                                     <!-- Product Thumbnail -->
                                     <a class="product-thumbnail d-block" href="{{route('product',$product['id'])}}">
-                                        <img src="{{config('app.api_url')}}/{{$product['image']}}" alt="">
+                                        <img src="{{config('app.api_url')}}/storage/{{$product['image']}}" alt="">
                                         <!-- Badge -->
                                     <!-- Product Title -->
                                     <a class="product-title d-block text-truncate" href="{{route('product',$product['id'])}}">{{$product['name']}}</a>
