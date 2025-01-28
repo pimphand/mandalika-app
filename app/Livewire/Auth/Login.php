@@ -8,7 +8,7 @@ use Livewire\Component;
 
 class Login extends Component
 {
-    #[Validate('required','email')]
+    #[Validate(['required','email'])]
     public string $email = '';
 
     #[Validate('required')]
@@ -30,7 +30,6 @@ class Login extends Component
             session(['token' => $data['token']]);
             return redirect()->to('/');
         }
-
         $this->addError('email', 'Email or password is incorrect.');
     }
 }

@@ -188,9 +188,16 @@
                 </li>
 
                 <li>
-                    <a href="elements.html">
+                    <a href="{{route('cart')}}">
+                        <i class="bi bi-cart"></i>
+                        <span>Keranjang</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{route('customer')}}">
                         <i class="bi bi-heart"></i>
-                        <span>CS Blacklist</span>
+                        <span>Customer</span>
                     </a>
                 </li>
 
@@ -223,6 +230,43 @@
 <script src="{{asset('assets')}}/js/pwa.js"></script>
 
 @stack('js')
+
+<script>
+    $(document).ready(function () {
+        // Get cart from local storage
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        $('.bi-cart').text(cart.length?cart.length:'');
+    });
+
+    function addCart(id) {
+        console.log(id);
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let product = $(`._image_${id}`).attr('src');
+        let name = $(`._name_${id}`).text();
+        let brand = $(`._brand_${id}`).text();
+        let category = $(`._category_${id}`).text();
+        let packaging = $(`._packagin_${id}`).text();
+        let qty = 1;
+        let find = cart.find((item) => item.id == id);
+        if (find){
+            find.qty += 1;
+        }else{
+            cart.push({id, image: product, name, brand, category, packaging, qty});
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        localStorage.setItem('cart', JSON.stringify(cart));
+        $('.bi-cart').text(cart.length?cart.length:'');
+    }
+
+    function removeCart(index) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.splice(index, 1);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        getCart();
+        $('.bi-cart').text(cart.length?cart.length:'');
+    }
+
+</script>
 </body>
 
 </html>

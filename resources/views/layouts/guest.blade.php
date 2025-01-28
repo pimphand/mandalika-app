@@ -53,9 +53,9 @@
     </div>
 </div>
 <!-- All JavaScript Files -->
-<script src="{{asset('assets')}}/js/bootstrap.bundle.min.js"></script>
-<script src="{{asset('assets')}}/js/slideToggle.min.js"></script>
-<script src="{{asset('assets')}}/js/internet-status.js"></script>
+<script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('assets/js/slideToggle.min.js')}}"></script>
+<script src="{{asset('assets/js/internet-status.js')}}"></script>
 <script src="{{asset('assets')}}/js/tiny-slider.js"></script>
 <script src="{{asset('assets')}}/js/venobox.min.js"></script>
 <script src="{{asset('assets')}}/js/countdown.js"></script>

@@ -56,6 +56,8 @@
                                     <!-- Product Price -->
                                     <p class="sale-price">{{$recomended['brand']}}</p>
                                     <p class="sale-price">{{$recomended['category']}}</p>
+                                    <p class="sale-price">{{$recomended['packaging']}}</p>
+
                                     <a class="btn btn-danger btn-sm" href="#">Tambah</a>
                                 </div>
                             </div>

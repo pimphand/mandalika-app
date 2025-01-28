@@ -1,7 +1,8 @@
 <x-app>
 
     <!-- Welcome Toast -->
-    <div class="toast toast-autohide custom-toast-1 toast-primary home-page-toast shadow" role="alert" aria-live="assertive" aria-atomic="true"
+    <div class="toast toast-autohide custom-toast-1 toast-primary home-page-toast shadow" role="alert"
+         aria-live="assertive" aria-atomic="true"
          data-bs-delay="60000" data-bs-autohide="true" id="installWrap">
         <div class="toast-body p-4">
             <div class="toast-text me-2">
@@ -21,7 +22,8 @@
             <!-- Single Hero Slide -->
             @foreach($data as $banner)
                 <div>
-                    <div class="single-hero-slide bg-overlay" style="background-image: url({{config('app.api_url')}}/{{$banner['image']['path']}})">
+                    <div class="single-hero-slide bg-overlay"
+                         style="background-image: url({{config('app.api_url')}}/{{$banner['image']['path']}})">
                         <div class="h-100 d-flex align-items-center text-center">
                             <div class="container">
                                 <h3 class="text-white mb-1">{{$banner['title']}}</h3>
@@ -105,20 +107,23 @@
                 <div class="row g-3">
 
                     @foreach($products as $product)
-
                         <div class="col-6 col-sm-4 col-lg-3">
                             <div class="card single-product-card">
                                 <div class="card-body p-3">
                                     <!-- Product Thumbnail -->
-                                    <a class="product-thumbnail d-block" href="{{route('product',$product['id'])}}">
-                                        <img src="{{config('app.api_url')}}/storage/{{$product['image']}}" alt="">
+                                    <a class="product-thumbnail d-block {{$product['id']}}" href="{{route('product',$product['id'])}}">
+                                        <img class="_image_{{$product['id']}}" src="{{config('app.api_url')}}/storage/{{$product['image']}}" alt="">
                                         <!-- Badge -->
-                                    <!-- Product Title -->
-                                    <a class="product-title d-block text-truncate" href="{{route('product',$product['id'])}}">{{$product['name']}}</a>
-                                    <!-- Product Price -->
-                                    <p class="sale-price">{{$product['brand']}}</p>
-                                    <p class="sale-price">{{$product['category']}}</p>
-                                    <a class="btn btn-danger rounded-pill btn-sm disabled" href="#">Tambah</a>
+                                        <!-- Product Title -->
+                                        <a class="product-title d-block text-truncate _name_{{$product['id']}}"
+                                           href="{{route('product',$product['id'])}}">{{$product['name']}}</a>
+                                        <!-- Product Price -->
+                                        <p class="sale-price _brand_{{$product['id']}}">{{$product['brand']}}</p>
+                                        <p class="sale-price _category_{{$product['id']}}">{{$product['category']}}</p>
+                                        <p class="sale-price _packagin_{{$product['id']}}">{{$product['packaging']}}</p>
+                                        <a class="btn btn-danger rounded-pill btn-sm" href="javascript:void(0)" onclick="addCart('{{$product['id']}}')">Tambah
+                                       </a>
+                                    </a>
                                 </div>
                             </div>
                         </div>
