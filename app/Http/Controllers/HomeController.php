@@ -50,4 +50,22 @@ class HomeController extends Controller
         $data = Customer::whereAny(['name', 'email', 'address','owner_address'],'LIKE', "%$request->search%")->get();
         return response()->json($data);
     }
+
+    public function orders(Request $request)
+    {
+        try {
+            $get = Http::withToken(session('token'))
+                ->acceptJson()
+                ->post(config('app.api_url') . '/api/orders',$request->all());
+            //get response code
+            $response = $get->status();
+            //check if response code is 201
+            if ($response == 201) {
+                return response()->json(['message' => 'Pesanan berhasil dibuat']);
+            }
+            return response()->json($get->json(),422);
+        }catch (\Exception $e){
+            return response()->json(['error' => $e->getMessage()]);
+        }
+    }
 }

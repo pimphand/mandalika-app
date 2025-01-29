@@ -213,6 +213,7 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <!-- All JavaScript Files -->
 <script src="{{asset('assets')}}/js/bootstrap.bundle.min.js"></script>
 <script src="{{asset('assets')}}/js/slideToggle.min.js"></script>
@@ -238,6 +239,18 @@
         $('.bi-cart').text(cart.length?cart.length:'');
     });
 
+    const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+        }
+    });
+
     function addCart(id) {
         console.log(id);
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -255,6 +268,10 @@
         }
         localStorage.setItem('cart', JSON.stringify(cart));
         localStorage.setItem('cart', JSON.stringify(cart));
+        Toast.fire({
+            icon: "success",
+            title: "Berhasil menambahkan ke keranjang"
+        });
         $('.bi-cart').text(cart.length?cart.length:'');
     }
 
@@ -264,6 +281,10 @@
         localStorage.setItem('cart', JSON.stringify(cart));
         getCart();
         $('.bi-cart').text(cart.length?cart.length:'');
+        Toast.fire({
+            icon: "success",
+            title: "Berhasil menghapus dari keranjang"
+        });
     }
 
 </script>
