@@ -182,7 +182,7 @@
                     </li>
 
                     <li>
-                        <a href="pages.html">
+                        <a href="{{ route('orders') }}">
                             <i class="bi bi-folder2-open"></i>
                             <span>Orderan PO</span>
                         </a>
@@ -203,8 +203,8 @@
                     </li>
 
                     <li>
-                        <a href="chat-users.html">
-                            <i class="bi bi-chat-dots"></i>
+                        <a href="{{ route('acccount') }}">
+                            <i class="bi bi-person-lock"></i>
                             <span>Akun</span>
                         </a>
                     </li>

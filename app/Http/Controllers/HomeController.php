@@ -50,7 +50,7 @@ class HomeController extends Controller
 
     public function saveCustomer(Request $request) //: \Illuminate\Http\JsonResponse
     {
-        $validate = $request->validate([
+        $request->validate([
             'name' => 'required',
             'phone' => 'required|numeric',
             'address' => 'required',
@@ -108,5 +108,14 @@ class HomeController extends Controller
         } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()]);
         }
+    }
+    public function listOrders(Request $request)
+    {
+        return view('orders');
+    }
+
+    public function acccount(Request $request)
+    {
+        return view('person');
     }
 }
