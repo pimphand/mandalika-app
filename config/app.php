@@ -105,7 +105,7 @@ return [
         ),
     ],
 
-    'api_url'=>env('API_URL',''),
+    'api_url' => env('API_URL', 'https://mandalikaputrabersama.com'),
 
     /*
     |--------------------------------------------------------------------------

@@ -8,7 +8,7 @@ use Livewire\Component;
 
 class Login extends Component
 {
-    #[Validate(['required','email'])]
+    #[Validate(['required', 'email'])]
     public string $email = '';
 
     #[Validate('required')]
@@ -21,11 +21,13 @@ class Login extends Component
     {
         $this->validate();
 
-        if (auth()->attempt(['email' => $this->email, 'password' => $this->password])) {
-            $data = Http::post(config('app.api_url') . '/api/login', [
-                'email' => $this->email,
-                'password' => $this->password
-            ]);
+        $data = Http::post(config('app.api_url') . '/api/login', [
+            'email' => $this->email,
+            'password' => $this->password
+        ]);
+
+        if ($data->status() ==  200 && auth()->attempt(['email' => $this->email, 'password' => $this->password])) {
+
             $data = $data->json();
             session(['token' => $data['token']]);
             return redirect()->to('/');
