@@ -101,7 +101,7 @@ class HomeController extends Controller
             //get response code
             $response = $get->status();
             //check if response code is 201
-            if ($response == 201) {
+            if ($response == 200) {
                 return response()->json(['message' => 'Pesanan berhasil dibuat']);
             }
             return response()->json($get->json(), 422);
