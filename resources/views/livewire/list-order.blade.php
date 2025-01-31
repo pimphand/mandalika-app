@@ -25,19 +25,35 @@
                 </div>
 
                 <div class="mb-3">
-                    <span class="badge bg-primary">Pending</span>
-                    <span class="badge bg-warning">Proses</span>
-                    <span class="badge bg-success">Sukses</span>
-                    <span class="badge bg-danger">Batal</span>
+                    <span wire:click="$set('status', '')" style="color: #fff;" class="btn badge bg-secondary status-btn"
+                        onclick="setActive(this)">Semua</span>
+                    <span wire:click="$set('status', 'process')" style="color: #fff;"
+                        class="btn badge bg-warning status-btn" onclick="setActive(this)">Proses</span>
+                    <span wire:click="$set('status', 'pending')" style="color: #fff;"
+                        class="btn badge bg-primary status-btn" onclick="setActive(this)">Pending</span>
+                    <span wire:click="$set('status', 'success')" style="color: #fff;"
+                        class="btn badge bg-success status-btn" onclick="setActive(this)">Sukses</span>
+                    <span wire:click="$set('status', 'cancel')" style="color: #fff;"
+                        class="btn badge bg-danger status-btn" onclick="setActive(this)">Batal</span>
+
                 </div>
                 <div class="accordion accordion-style-five" id="accordionStyle5">
                     <!-- Single Accordion -->
                     @php
                         $status = [
                             'pending' => 'primary',
-                            'proses' => 'warning',
+                            'process' => 'warning',
                             'success' => 'success',
                             'cancel' => 'danger',
+                            'done' => 'success',
+                        ];
+
+                        $statusId = [
+                            'pending' => 'Pending',
+                            'process' => 'Proses',
+                            'success' => 'Selesai',
+                            'cancel' => 'Batal',
+                            'done' => 'Selesai',
                         ];
                     @endphp
                     @forelse ($orders['data'] as $order)
@@ -55,7 +71,7 @@
                                         Toko : {{ $order['customer']['store_name'] }}<br>
                                         Alamat : {{ $order['customer']['address'] }}<br>
                                         Telp : {{ $order['customer']['phone'] }}<br>
-                                        Status : <strong>{{ $order['status'] }}</strong>
+                                        Status : <strong>{{ $statusId[$order['status']] }}</strong>
                                     </p>
                                     <div class="table-responsive mt-1">
                                         <table class="table table-bordered ">
