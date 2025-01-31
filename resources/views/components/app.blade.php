@@ -381,7 +381,7 @@
 
 
         function addCart(id) {
-            console.log(id);
+
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
             let product = $(`._image_${id}`).attr('src');
             let name = $(`._name_${id}`).text();

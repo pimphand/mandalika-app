@@ -20,19 +20,24 @@
         <div class="element-heading d-flex justify-content-between align-items-center mb-2">
             <h6 class="ps-1">Customer</h6>
             <div>
-                <button class="btn btn-sm btn-outline-primary" wire:click="resetFilters" id="resetFilters">Semua
-                </button>
-                <button class="btn btn-sm btn-outline-success" wire:click="$set('isBlacklist', 'aktif')">Aktif
-                </button>
-                <button class="btn btn-sm btn-outline-dark" wire:click="$set('isBlacklist', 'blacklist')">Blacklist
-                </button>
+                @if (request()->routeIs('customer'))
+                    <button class="btn btn-sm btn-outline-primary" wire:click="resetFilters" id="resetFilters">Semua
+                    </button>
+                    <button class="btn btn-sm btn-outline-success" wire:click="$set('isBlacklist', 'aktif')">Aktif
+                    </button>
+
+                    <button class="btn btn-sm btn-outline-dark" wire:click="$set('isBlacklist', 'blacklist')">Blacklist
+                    </button>
+                @endif
             </div>
-            <div>
-                <span class="badge bg-primary">Pending</span>
-                <span class="badge bg-warning">Proses</span>
-                <span class="badge bg-success">Sukses</span>
-                <span class="badge bg-danger">Batal</span>
-            </div>
+            @if (request()->routeIs('customer'))
+                <div>
+                    <span class="badge bg-primary">Pending</span>
+                    <span class="badge bg-warning">Proses</span>
+                    <span class="badge bg-success">Sukses</span>
+                    <span class="badge bg-danger">Batal</span>
+                </div>
+            @endif
         </div>
         <ul class="ps-0 chat-user-list">
             <!-- Single Chat User -->
@@ -51,10 +56,12 @@
                             <h6 class="text-truncate mb-0">{{ $customer->name }}</h6>
                             <div class="last-chat d-flex justify-content-between align-items-center">
                                 <div>
-                                    <p class="mb-0 text-truncate">{{ $customer->address }}</p>
+                                    <p class="mb-0 text-truncate"
+                                        style="overflow: hidden;text-overflow: ellipsis; white-space: nowrap">
+                                        {{ Str::limit($customer->address, 30, '...') }}</p>
                                     <p class="mb-0 text-truncate">Toko : {{ $customer->store_name }}</p>
                                 </div>
-                                @if ($customer->orders_count > 0)
+                                @if ($customer->orders_count > 0 && request()->routeIs('customer'))
                                     <div class="chat-time text-end">
                                         Order :
                                         @if ($customer->order_pending > 0)
@@ -76,17 +83,19 @@
                         </div>
                     </a>
                     <!-- Options -->
-                    <div class="dropstart chat-options-btn">
-                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <i class="bi bi-three-dots-vertical"></i>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a href="#"><i class="bi bi-mic-mute"></i>Mute</a></li>
-                            <li><a href="#"><i class="bi bi-slash-circle"></i>Ban</a></li>
-                            <li><a href="#"><i class="bi bi-trash"></i>Remove</a></li>
-                        </ul>
-                    </div>
+                    @if (request()->routeIs('customer'))
+                        <div class="dropstart chat-options-btn">
+                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-three-dots-vertical"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#"><i class="bi bi-mic-mute"></i>Mute</a></li>
+                                <li><a href="#"><i class="bi bi-slash-circle"></i>Ban</a></li>
+                                <li><a href="#"><i class="bi bi-trash"></i>Remove</a></li>
+                            </ul>
+                        </div>
+                    @endif
                 </li>
             @endforeach
         </ul>
