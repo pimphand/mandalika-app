@@ -25,8 +25,8 @@
                         style="background-image: url({{ config('app.api_url') }}/storage/{{ $banner['image']['path'] }})">
                         <div class="h-100 d-flex align-items-center text-center">
                             <div class="container">
-                                <h3 class="text-white mb-1">{{ $banner['title'] }}</h3>
-                                <p class="text-white mb-4">{{ $banner['description'] }}</p>
+                                {{-- <h3 class="text-white mb-1">{{ $banner['title'] }}</h3>
+                                <p class="text-white mb-4">{{ $banner['description'] }}</p> --}}
                                 @if ($banner['url'])
                                     <a class="btn btn-creative btn-warning" href="{{ $banner['url'] }}">Lebih Detail</a>
                                 @endif
@@ -38,7 +38,6 @@
         </div>
     </div>
 
-    <div class="pt-3"></div>
 
     <div class="container direction-rtl">
         <div class="card mb-3">
@@ -85,7 +84,7 @@
     </div>
 
     <!-- Tiny Slider Three -->
-    <div class="page-content-wrapper">
+    <div class="page-content-wrapper" style="margin-top: 20px;">
         <!-- Pagination -->
         <div class="shop-pagination pb-3">
             <div class="container">
