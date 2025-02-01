@@ -21,7 +21,7 @@
             <!-- Single Hero Slide -->
             @foreach ($data as $banner)
                 <div>
-                    <div class="single-hero-slide bg-overlay"
+                    <div class="single-hero-slide"
                         style="background-image: url({{ config('app.api_url') }}/storage/{{ $banner['image']['path'] }})">
                         <div class="h-100 d-flex align-items-center text-center">
                             <div class="container">
