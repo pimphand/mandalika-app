@@ -88,11 +88,11 @@
         <!-- Pagination -->
         <div class="shop-pagination pb-3">
             <div class="container">
-                <div class="card">
+                <div class="card" style="background-color: #e7f3ed;">
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between">
                             <small class="ms-1">Paling Laku Minggu Ini</small>
-                            <a class="btn btn-info btn-sm">Lihat Semua</a>
+                            <a class="btn btn-info btn-sm" style="background-color: #008e3c;">Lihat Semua</a>
                         </div>
                     </div>
                 </div>
@@ -120,12 +120,13 @@
                                             href="{{ route('product', $product['id']) }}">{{ $product['name'] }}</a>
                                         <!-- Product Price -->
                                         <p class="sale-price _brand_{{ $product['id'] }}">{{ $product['brand'] }}</p>
-                                        <p class="sale-price _category_{{ $product['id'] }}">
+                                        <p class="_category_{{ $product['id'] }}">
                                             {{ $product['category'] }}</p>
-                                        <p class="sale-price _packagin_{{ $product['id'] }}">
+                                        <p class="_packagin_{{ $product['id'] }}">
                                             {{ $product['packaging'] }}</p>
-                                        <a class="btn btn-danger rounded-pill btn-sm" href="javascript:void(0)"
-                                            onclick="addCart('{{ $product['id'] }}')">Tambah
+                                        <a class="btn btn-success btn-sm" href="javascript:void(0)"
+                                            style="background-color: #008e3c;"
+                                            onclick="addCart('{{ $product['id'] }}')">Masukan Keranjang
                                         </a>
                                     </a>
                                 </div>

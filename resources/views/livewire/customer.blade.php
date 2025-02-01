@@ -20,26 +20,19 @@
         <div class="element-heading d-flex justify-content-between align-items-center mb-2">
             <h6 class="ps-1">Customer</h6>
             <div>
-                @if (request()->routeIs('customer'))
-                    <button class="btn btn-sm btn-outline-primary" wire:click="resetFilters" id="resetFilters">Semua
-                    </button>
-                    <button class="btn btn-sm btn-outline-success" wire:click="$set('isBlacklist', 'aktif')">Aktif
-                    </button>
 
-                    <button class="btn btn-sm btn-outline-dark" wire:click="$set('isBlacklist', 'blacklist')">Blacklist
-                    </button>
-                @endif
+                <button class="btn btn-sm btn-outline-primary" wire:click="resetFilters" id="resetFilters">Semua
+                </button>
+                <button class="btn btn-sm btn-outline-success" wire:click="$set('isBlacklist', 'aktif')">Aktif
+                </button>
+
+                <button class="btn btn-sm btn-outline-dark" wire:click="$set('isBlacklist', 'blacklist')">Blacklist
+                </button>
+
             </div>
-            @if (request()->routeIs('customer'))
-                <div>
-                    <span class="badge bg-primary">Pending</span>
-                    <span class="badge bg-warning">Proses</span>
-                    <span class="badge bg-success">Sukses</span>
-                    <span class="badge bg-danger">Batal</span>
-                </div>
-            @endif
+
         </div>
-        <ul class="ps-0 chat-user-list">
+        <ul class="ps-0 chat-user-list mb-2">
             <!-- Single Chat User -->
             @foreach ($customers as $customer)
                 <li class="p-3 chat-unread customer" data-id="{{ $customer->id }}">
@@ -61,24 +54,6 @@
                                         {{ Str::limit($customer->address, 30, '...') }}</p>
                                     <p class="mb-0 text-truncate">Toko : {{ $customer->store_name }}</p>
                                 </div>
-                                @if ($customer->orders_count > 0 && request()->routeIs('customer'))
-                                    <div class="chat-time text-end">
-                                        Order :
-                                        @if ($customer->order_pending > 0)
-                                            <span class="badge bg-primary">{{ $customer->order_pending }}</span>
-                                        @endif
-                                        @if ($customer->order_proses > 0)
-                                            <span class="badge bg-warning">{{ $customer->order_proses }}</span>
-                                        @endif
-                                        @if ($customer->order_success > 0)
-                                            <span class="badge bg-success">{{ $customer->order_success }}</span>
-                                        @endif
-                                        @if ($customer->order_cancel > 0)
-                                            <span class="badge bg-danger">{{ $customer->order_cancel }}</span>
-                                        @endif
-
-                                    </div>
-                                @endif
                             </div>
                         </div>
                     </a>

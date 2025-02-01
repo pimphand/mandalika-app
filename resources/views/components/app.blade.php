@@ -229,22 +229,16 @@
                         <!-- Step 1 -->
                         <div id="step-1">
                             <div class="mb-3">
-                                <label for="name" class="form-label">Nama Lengkap</label>
-                                <input class="form-control" type="text" placeholder="masukan nama lengkap"
+                                <label for="name" class="form-label">Nama Pemilik</label>
+                                <input class="form-control" type="text" placeholder="masukan nama pemilik"
                                     id="name" aria-label="Name" required>
                             </div>
 
                             <div class="mb-3">
                                 <label for="phone" class="form-label">Nomor Telepon <small>(Whatsapp)</small>
                                 </label>
-                                <input class="form-control" type="text" placeholder="masukan nomor telepon"
+                                <input class="form-control" type="number" placeholder="masukan nomor telepon"
                                     id="phone" aria-label="Phone" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="owner_address" class="form-label">Alamat Pemilik</label>
-                                <input class="form-control" type="text" placeholder="masukan alamat pemilik"
-                                    id="owner_address" aria-label="Owner Address" required>
                             </div>
 
                             <div class="mb-3">
@@ -264,8 +258,6 @@
 
                         <!-- Step 2 (Initially hidden) -->
                         <div id="step-2" style="display: none;">
-
-
                             <div class="mb-3">
                                 <label for="npwp" class="form-label">NPWP <small>(optional)</small></label>
                                 <input class="form-control" type="text" placeholder="Enter NPWP" id="npwp"
@@ -273,20 +265,14 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="others" class="form-label">Others</label>
-                                <input class="form-control" type="text" placeholder="Enter Other Information"
-                                    id="others" aria-label="Others">
-                            </div>
-
-                            <div class="mb-3">
                                 <label for="store_photo" class="form-label">Store Photo</label>
-                                <input class="form-control" type="file" id="store_photo"
+                                <input class="form-control" type="file" id="store_photo" accept="image/*"
                                     aria-label="Store Photo">
                             </div>
 
                             <div class="mb-3">
                                 <label for="owner_photo" class="form-label">Owner Photo</label>
-                                <input class="form-control" type="file" id="owner_photo"
+                                <input class="form-control" type="file" id="owner_photo" accept="image/*"
                                     aria-label="Owner Photo">
                             </div>
 
@@ -331,10 +317,9 @@
                 const name = document.getElementById('name').value;
                 const phone = document.getElementById('phone').value;
                 const address = document.getElementById('address').value;
-                const ownerAddress = document.getElementById('owner_address').value;
 
                 // Check if all required fields are filled in
-                if (!name || !phone || !address || !ownerAddress) {
+                if (!name || !phone || !address) {
                     //sweetalert
                     Swal.fire({
                         icon: 'error',
@@ -425,7 +410,7 @@
         }
 
         // Event listener for input fields to remove the error when typing
-        $('#name, #phone, #address, #owner_address, #store_name, #npwp, #others').on('input', function() {
+        $('#name, #phone, #address, #owner_address, #store_name, #npwp').on('input', function() {
             const inputField = $(this);
             inputField.removeClass('is-invalid'); // Remove invalid class
             inputField.siblings('.invalid-feedback').remove(); // Remove the error message
@@ -447,7 +432,6 @@
                 formData.append('name', $('#name').val());
                 formData.append('phone', $('#phone').val());
                 formData.append('address', $('#address').val());
-                formData.append('owner_address', $('#owner_address').val());
 
                 // Step 2
                 formData.append('store_name', $('#store_name').val());

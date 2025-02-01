@@ -18,13 +18,12 @@
 
         <div class="card product-details-card mb-3 direction-rtl">
             <div class="card-body">
-                <h4 class="name_{{ $product['data']['id'] }}">{{ $product['data']['name'] }}</h4>
-                <h4 class="brand_{{ $product['data']['id'] }}">{{ $product['data']['brand'] }}</h4>
-                <h4 class="category_{{ $product['data']['id'] }}">{{ $product['data']['category'] }}</h4>
-
-                <h5>Kemasan : <span
+                <h6 class="name_{{ $product['data']['id'] }}">{{ $product['data']['name'] }}</h6>
+                <h6 class="brand_{{ $product['data']['id'] }}">{{ $product['data']['brand'] }}</h6>
+                <p class="category_{{ $product['data']['id'] }}">{{ $product['data']['category'] }} <br>
+                    Kemasan : <span
                         class="packagin_{{ $product['data']['id'] }}">{{ $product['data']['packaging'] }}</span>
-                </h5>
+                </p>
                 <div class="input-group">
                     <input class="input-group-text form-control value" type="number" value="1">
                     <button class="btn btn-primary w-50" onclick="addCartProduct('{{ $product['data']['id'] }}')"

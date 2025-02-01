@@ -1,0 +1,19 @@
+- blacklist show all sales
+- blacklist add description
+- button: edit, blacklist, remove
+
+#product
+- button choose login sales/chat admin
+
+#beranda
+if login
+Customer = Blog
+Omset = Sales
+
+#sku
+harga riseller = input harga
+harga satuan = statis
+
+
+#order
+- remove catergory

@@ -40,7 +40,7 @@ class Customer extends Component
                 },
             ])
             ->withCount('orders')
-            ->whereAny(['name', 'address', 'owner_address'], 'LIKE', "%$this->search%");
+            ->whereAny(['name', 'address', 'owner_address', 'store_name'], 'LIKE', "%$this->search%");
 
         if (isset($this->isBlacklist)) {
             $customers->where('is_blacklist', $this->isBlacklist);

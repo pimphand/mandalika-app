@@ -25,8 +25,8 @@
                 </div>
 
                 <div class="mb-3">
-                    <span wire:click="$set('status', '')" style="color: #fff;"
-                        class="btn mb-1 badge bg-secondary status-btn" onclick="setActive(this)">Semua</span>
+                    {{-- <span wire:click="$set('status', '')" style="color: #fff;"
+                        class="btn mb-1 badge bg-secondary status-btn" onclick="setActive(this)">Semua</span> --}}
                     <span wire:click="$set('status', 'pending')" style="color: #fff;" data-bs-toggle="tooltip"
                         data-bs-placement="right"
                         data-bs-original-title="Orderan yg baru di ajukan oleh sales namun blm di approve oleh admin"
@@ -94,16 +94,9 @@
                                         Toko : {{ $order['customer']['name'] }}<br>
                                         Alamat : {{ $order['customer']['address'] }}<br>
                                         Telp : {{ $order['customer']['phone'] }}<br>
+                                        Status : {{ $statusId[$order['status']] }}
                                     </p>
-                                    Status : <select class="form-select mb-3 form-control-clicked" id="selectCountry"
-                                        name="selectCountry" aria-label="Default select example"
-                                        wire:change="changeStatus({{ $order['id'] }},$event.target.value)">
-                                        @foreach ($statusId as $key => $st)
-                                            <option value="{{ $key }}"
-                                                @if ($order['status'] == $key) selected @endif>
-                                                {{ $st }}</option>
-                                        @endforeach
-                                    </select>
+
                                     <div class="table-responsive mt-1">
                                         <table class="table table-bordered ">
                                             <thead>
