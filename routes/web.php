@@ -9,12 +9,13 @@ Route::middleware('auth')->group(function () {
     Route::post('/orders', [\App\Http\Controllers\HomeController::class, 'orders']);
     Route::get('/orders', [\App\Http\Controllers\HomeController::class, 'listOrders'])->name('orders');
 
-
     Route::get('/acccount', [\App\Http\Controllers\HomeController::class, 'acccount'])->name('acccount');
 
     Route::get('/cart', [\App\Http\Controllers\HomeController::class, 'cart'])->name('cart');
     Route::get('/customer', [\App\Http\Controllers\HomeController::class, 'customer'])->name('customer');
     Route::post('/customer', [\App\Http\Controllers\HomeController::class, 'saveCustomer']);
+
+    Route::get('success/{id}', [\App\Http\Controllers\HomeController::class, 'success'])->name('success');
 
 
     Route::get('/customer-data', [\App\Http\Controllers\HomeController::class, 'customerData'])->name('customer.data');

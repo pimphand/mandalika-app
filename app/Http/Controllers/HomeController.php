@@ -118,4 +118,9 @@ class HomeController extends Controller
     {
         return view('person');
     }
+
+    public function success($id)
+    {
+        ///
+    }
 }

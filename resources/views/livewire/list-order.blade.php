@@ -3,13 +3,13 @@
         <div class="card">
             <div class="card-body">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-12">
                         <div class="form-group mb-3">
                             <input class="form-control form-control-clicked" wire:model.live.debounce.300ms="customer"
                                 type="text" placeholder="Cari Customer">
                         </div>
                     </div>
-                    <div class="col-4">
+                    {{-- <div class="col-4">
                         <div class="form-group mb-3">
                             <input class="form-control form-control-clicked" wire:model.live.debounce.300ms="product"
                                 type="text" placeholder="Cari Produk">
@@ -17,24 +17,30 @@
                     </div>
                     <div class="col-4">
                         <div class="form-group mb-3">
-                            <input class="form-control form-control-clicked" wire:model.live.debounce.300ms="id"
+                            <input class="form-control form-control-clicked" wire:model.live.debounce.300ms="ids"
                                 type="text" placeholder="Cari Order">
                         </div>
-                    </div>
+                    </div> --}}
 
                 </div>
 
                 <div class="mb-3">
-                    <span wire:click="$set('status', '')" style="color: #fff;" class="btn badge bg-secondary status-btn"
-                        onclick="setActive(this)">Semua</span>
-                    <span wire:click="$set('status', 'process')" style="color: #fff;"
-                        class="btn badge bg-warning status-btn" onclick="setActive(this)">Proses</span>
-                    <span wire:click="$set('status', 'pending')" style="color: #fff;"
-                        class="btn badge bg-primary status-btn" onclick="setActive(this)">Pending</span>
-                    <span wire:click="$set('status', 'success')" style="color: #fff;"
-                        class="btn badge bg-success status-btn" onclick="setActive(this)">Sukses</span>
+                    <span wire:click="$set('status', '')" style="color: #fff;"
+                        class="btn mb-1 badge bg-secondary status-btn" onclick="setActive(this)">Semua</span>
+                    <span wire:click="$set('status', 'pending')" style="color: #fff;" data-bs-toggle="tooltip"
+                        data-bs-placement="right"
+                        data-bs-original-title="Orderan yg baru di ajukan oleh sales namun blm di approve oleh admin"
+                        class="btn mb-1 badge bg-primary status-btn" onclick="setActive(this)">Pending</span>
+                    <span wire:click="$set('status', 'process')" style="color: #fff;" data-bs-toggle="tooltip"
+                        data-bs-placement="right"
+                        data-bs-original-title="Orderan yg telah di approve oleh admin dan akan di kirimkan ke toko"
+                        class="btn mb-1 badge bg-warning status-btn" onclick="setActive(this)">Proses</span>
+
+                    <span wire:click="$set('status', 'success')" style="color: #fff;" data-bs-placement="right"
+                        data-bs-original-title="Orderan yg telah berhasil terkirim ke toko (barang telah sampai ke Costumer) pada tahap orderan sukses disini akan tercantum harga beserta total penjualan nya"
+                        class="btn mb-1 badge bg-success status-btn" onclick="setActive(this)">Sukses</span>
                     <span wire:click="$set('status', 'cancel')" style="color: #fff;"
-                        class="btn badge bg-danger status-btn" onclick="setActive(this)">Batal</span>
+                        class="btn mb-1 badge bg-danger status-btn" onclick="setActive(this)">Batal</span>
 
                 </div>
                 <div class="accordion accordion-style-five" id="accordionStyle5">
@@ -56,23 +62,48 @@
                             'done' => 'Selesai',
                         ];
                     @endphp
+                    {{-- session --}}
+                    @if (session()->has('success'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>{{ session('success') }}</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                aria-label="Close"></button>
+                        </div>
+                    @endif
+                    @if (session()->has('error'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>{{ session('error') }}</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                aria-label="Close"></button>
+                        </div>
+                    @endif
+
                     @forelse ($orders['data'] as $order)
                         <div class="accordion-item accordion-bg-{{ $status[$order['status']] }}">
                             <div class="accordion-header" id="{{ $order['id'] }}">
                                 <h6 data-bs-toggle="collapse" data-bs-target="#accordionStyleFive{{ $order['id'] }}"
                                     aria-expanded="false" aria-controls="accordionStyleFive{{ $order['id'] }}"
                                     class="collapsed">
-                                    <i class="bi bi-plus-lg"></i> {{ $order['id'] }} - {{ $order['customer']['name'] }}
+                                    <i class="bi bi-plus-lg"></i> {{ $order['id'] }} -
+                                    {{ $order['customer']['store_name'] }}
                                 </h6>
                                 <div class="accordion-collapse collapse" id="accordionStyleFive{{ $order['id'] }}"
                                     aria-labelledby="{{ $order['id'] }}" data-bs-parent="#accordionStyle5"
                                     style="">
                                     <p class="mb-0 mt-2" style="color: #000;">
-                                        Toko : {{ $order['customer']['store_name'] }}<br>
+                                        Toko : {{ $order['customer']['name'] }}<br>
                                         Alamat : {{ $order['customer']['address'] }}<br>
                                         Telp : {{ $order['customer']['phone'] }}<br>
-                                        Status : <strong>{{ $statusId[$order['status']] }}</strong>
                                     </p>
+                                    Status : <select class="form-select mb-3 form-control-clicked" id="selectCountry"
+                                        name="selectCountry" aria-label="Default select example"
+                                        wire:change="changeStatus({{ $order['id'] }},$event.target.value)">
+                                        @foreach ($statusId as $key => $st)
+                                            <option value="{{ $key }}"
+                                                @if ($order['status'] == $key) selected @endif>
+                                                {{ $st }}</option>
+                                        @endforeach
+                                    </select>
                                     <div class="table-responsive mt-1">
                                         <table class="table table-bordered ">
                                             <thead>
