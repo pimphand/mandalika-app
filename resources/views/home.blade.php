@@ -57,7 +57,7 @@
                             <div class="card mx-auto bg-gray">
                                 <img src="{{ asset('assets') }}/img/demo-img/pwa.png" alt="">
                             </div>
-                            <p class="mb-0">Customer</p>
+                            <p class="mb-0">Artikel</p>
                         </div>
                     </div>
 

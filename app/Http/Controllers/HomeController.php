@@ -23,11 +23,16 @@ class HomeController extends Controller
         return view('home', compact('data', 'products'));
     }
 
-    public function products(Request $request) {}
+    public function products(Request $request)
+    {
+        $get = Http::get(config('app.api_url') . '/api/products');
+        $data = $get->json();
+        return view('products', ['products' => $data]);
+    }
 
     public function product($id): Application|Factory|View
     {
-        $get = Http::withToken(session('token'))->get(config('app.api_url') . '/api/products/' . $id);
+        $get = Http::get(config('app.api_url') . '/api/products/' . $id);
         $data = $get->json();
         return view('product', ['product' => $data]);
     }
