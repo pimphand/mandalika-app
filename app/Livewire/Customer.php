@@ -24,22 +24,23 @@ class Customer extends Component
 
     public function render()
     {
-        $customers = \App\Models\Customer::with('orders')
-            ->withCount([
-                'orders as order_pending' => function ($query) {
-                    $query->where('status', 'pending');
-                },
-                'orders as order_success' => function ($query) {
-                    $query->where('status', 'success');
-                },
-                'orders as order_cancel' => function ($query) {
-                    $query->where('status', 'cancel');
-                },
-                'orders as order_proses' => function ($query) {
-                    $query->where('status', 'proses');
-                },
-            ])
-            ->withCount('orders')
+        $customers = \App\Models\Customer::withCount([
+            'orders as order_pending' => function ($query) {
+                $query->where('status', 'pending');
+            },
+            'orders as order_success' => function ($query) {
+                $query->where('status', 'success');
+            },
+            'orders as order_cancel' => function ($query) {
+                $query->where('status', 'cancel');
+            },
+            'orders as order_proses' => function ($query) {
+                $query->where('status', 'proses');
+            },
+        ])
+            ->when(!request()->routeIs('customer'), function ($query) {
+                $query->whereNotLike('is_blacklist', 'blacklist');
+            })
             ->whereAny(['name', 'address', 'owner_address', 'store_name'], 'LIKE', "%$this->search%");
 
         if (isset($this->isBlacklist)) {

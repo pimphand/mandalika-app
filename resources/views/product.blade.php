@@ -26,8 +26,8 @@
                 </p>
                 <div class="input-group">
                     <input class="input-group-text form-control value" type="number" value="1">
-                    <button class="btn btn-primary w-50" onclick="addCartProduct('{{ $product['data']['id'] }}')"
-                        id="_add_to_cart" type="button">Tambah</button>
+                    <button class="btn btn-success w-50" onclick="addCartProduct('{{ $product['data']['id'] }}')"
+                        style="background-color: #008e3c;" id="_add_to_cart" type="button">Tambah</button>
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@
             </div>
         </div>
 
-        <div class="card related-product-card direction-rtl">
+        <div class="top-products-area">
             <div class="card-body">
                 <h5 class="mb-3">Related Products</h5>
 
@@ -64,7 +64,9 @@
                                     <p class="sale-price">{{ $recomended['category'] }}</p>
                                     <p class="sale-price">{{ $recomended['packaging'] }}</p>
 
-                                    <a class="btn btn-danger btn-sm" href="#">Tambah</a>
+                                    <a class="btn btn-success btn-sm" href="#"
+                                        style="background-color: #008e3c;font-size:10px;padding:5px">Masukan
+                                        Keranjang</a>
                                 </div>
                             </div>
                         </div>

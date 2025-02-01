@@ -1,8 +1,10 @@
 <x-app>
     <style>
         .customer.active {
-            background-color: #007bff !important; /* Warna biru */
-            color: #fff !important; /* Warna teks putih */
+            background-color: #007bff !important;
+            /* Warna biru */
+            color: #fff !important;
+            /* Warna teks putih */
             border-radius: 5px;
         }
     </style>
@@ -16,12 +18,12 @@
                     <div class="table-responsive card-body">
                         <table class="table mb-0 text-center">
                             <thead>
-                            <tr>
-                                <th scope="col">Gambar</th>
-                                <th scope="col">Deskripsi</th>
-                                <th scope="col">Jumlah</th>
-                                <th scope="col">Aksi</th>
-                            </tr>
+                                <tr>
+                                    <th scope="col">Gambar</th>
+                                    <th scope="col">Deskripsi</th>
+                                    <th scope="col">Jumlah</th>
+                                    <th scope="col">Aksi</th>
+                                </tr>
                             </thead>
                             <tbody id="list-cart">
                             </tbody>
@@ -33,17 +35,17 @@
                             <h6 class="mb-0">Pilih Customer</h6>
                             <livewire:customer />
                             <!-- Coupon Form -->
-{{--                            <div class="d-flex">--}}
-{{--                                <div class="form-check m-2">--}}
-{{--                                    <input class="form-check-input" value="process" type="radio" name="status" id="primaryRadio">--}}
-{{--                                    <label class="form-check-label" for="primaryRadio">Bayar</label>--}}
-{{--                                </div>--}}
+                            {{--                            <div class="d-flex"> --}}
+                            {{--                                <div class="form-check m-2"> --}}
+                            {{--                                    <input class="form-check-input" value="process" type="radio" name="status" id="primaryRadio"> --}}
+                            {{--                                    <label class="form-check-label" for="primaryRadio">Bayar</label> --}}
+                            {{--                                </div> --}}
 
-{{--                                <div class="form-check m-2">--}}
-{{--                                    <input class="form-check-input" value="pending" checked type="radio" name="status" id="lightRadio">--}}
-{{--                                    <label class="form-check-label" for="lightRadio">Pending</label>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
+                            {{--                                <div class="form-check m-2"> --}}
+                            {{--                                    <input class="form-check-input" value="pending" checked type="radio" name="status" id="lightRadio"> --}}
+                            {{--                                    <label class="form-check-label" for="lightRadio">Pending</label> --}}
+                            {{--                                </div> --}}
+                            {{--                            </div> --}}
                             <div class="coupon-form mt-2">
                                 <!-- Checkout -->
                                 <button class="btn btn-danger w-100 mt-3" id="save">Simpan</button>
@@ -65,7 +67,7 @@
                 let cart = JSON.parse(localStorage.getItem('cart')) || [];
                 $('#list-cart').html('');
                 if (cart.length > 0) {
-                    $.each(cart, function (index, value) {
+                    $.each(cart, function(index, value) {
                         $('#list-cart').append(`
                         <tr>
                             <td>
@@ -75,7 +77,6 @@
                                 <h6>${value.name}</h6>
                                 <p class="mb-0">${value.brand}</p>
                                 <p class="mb-0">${value.category}</p>
-                                <p class="mb-0">${value.packaging}</p>
                             </td>
                             <td>
                                 <div class="input-group">
@@ -98,7 +99,7 @@
             }
 
             //click customer
-            $(document).on('click', '.customer', function () {
+            $(document).on('click', '.customer', function() {
                 let id = $(this).data('id');
                 console.log(id);
 
@@ -113,7 +114,7 @@
             });
 
             //click save
-            $('#save').click(function (e) {
+            $('#save').click(function(e) {
                 e.preventDefault();
                 //cart
                 let cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -130,7 +131,7 @@
                         status: status,
                         items: updatedCart
                     };
-                    $.post("{{route('orders')}}", data, function (response) {
+                    $.post("{{ route('orders') }}", data, function(response) {
 
                         // Jika sukses, kosongkan keranjang
                         localStorage.removeItem('cart');
@@ -141,7 +142,7 @@
                             icon: "success",
                             draggable: true
                         });
-                    }).fail(function (xhr, status, error) {
+                    }).fail(function(xhr, status, error) {
                         let xhrJSON = xhr.responseJSON;
                         Swal.fire({
                             title: xhrJSON.message.customer_id,

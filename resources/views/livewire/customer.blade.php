@@ -19,17 +19,18 @@
         </div>
         <div class="element-heading d-flex justify-content-between align-items-center mb-2">
             <h6 class="ps-1">Customer</h6>
-            <div>
+            @if (request()->routeIs('customer'))
+                <div>
+                    <button class="btn btn-sm btn-outline-primary" wire:click="resetFilters" id="resetFilters">Semua
+                    </button>
+                    <button class="btn btn-sm btn-outline-success" wire:click="$set('isBlacklist', 'aktif')">Aktif
+                    </button>
 
-                <button class="btn btn-sm btn-outline-primary" wire:click="resetFilters" id="resetFilters">Semua
-                </button>
-                <button class="btn btn-sm btn-outline-success" wire:click="$set('isBlacklist', 'aktif')">Aktif
-                </button>
+                    <button class="btn btn-sm btn-outline-dark" wire:click="$set('isBlacklist', 'blacklist')">Blacklist
+                    </button>
 
-                <button class="btn btn-sm btn-outline-dark" wire:click="$set('isBlacklist', 'blacklist')">Blacklist
-                </button>
-
-            </div>
+                </div>
+            @endif
 
         </div>
         <ul class="ps-0 chat-user-list mb-2">
