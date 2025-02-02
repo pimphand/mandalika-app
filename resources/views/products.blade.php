@@ -1,5 +1,4 @@
 <x-app>
-    @livewireStyles
     <style>
         .single-product-card {
             display: flex;
@@ -64,6 +63,6 @@
     </style>
     <div class="pt-3"></div>
 
-    <livewire:product />
+    <livewire:list-product />
 
 </x-app>

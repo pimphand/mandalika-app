@@ -34,6 +34,8 @@
                     </div>
 
                     <button class="btn btn-success w-100" id="buttonPerson" type="button">Update Now</button>
+                    <button class="btn btn-danger w-100 mt-2" id="logout" type="button">Logout</button>
+
                 </form>
             </div>
         </div>

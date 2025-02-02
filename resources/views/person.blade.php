@@ -13,6 +13,21 @@
                     icon: 'info',
                 });
             });
+
+            $('#logout').on('click', function() {
+                $.ajax({
+                    type: "post",
+                    url: "{{ route('logout') }}",
+                    data: {
+                        _token: "{{ csrf_token() }}"
+                    },
+                    success: function(response) {
+                        localStorage.removeItem('cart');
+                        localStorage.removeItem('customer_id');
+                        window.location.href = "/";
+                    }
+                });
+            });
         </script>
     @endpush
 </x-app>

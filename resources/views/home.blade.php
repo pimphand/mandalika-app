@@ -116,18 +116,25 @@
                                             alt="">
                                         <!-- Badge -->
                                         <!-- Product Title -->
-                                        <a class="product-title d-block text-truncate _name_{{ $product['id'] }}"
+                                        <a class="product-title d-block text-truncate _name_{{ $product['id'] }} name"
                                             href="{{ route('product', $product['id']) }}">{{ $product['name'] }}</a>
                                         <!-- Product Price -->
-                                        <p class="sale-price _brand_{{ $product['id'] }}">{{ $product['brand'] }}</p>
-                                        <p class="_category_{{ $product['id'] }}">
+                                        <p class="sale-price _brand_{{ $product['id'] }} brand">
+                                            {{ $product['brand'] }}</p>
+                                        <p class="_category_{{ $product['id'] }} category">
                                             {{ $product['category'] }}</p>
-                                        <p class="_packagin_{{ $product['id'] }}">
+                                        <p class="_packagin_{{ $product['id'] }} packaging">
                                             {{ $product['packaging'] }}</p>
-                                        <a class="btn btn-success btn-sm" href="javascript:void(0)"
-                                            style="background-color: #008e3c;"
-                                            onclick="addCart('{{ $product['id'] }}')">Masukan Keranjang
-                                        </a>
+                                        @auth
+                                            <a class="btn btn-success btn-sm" href="javascript:void(0)"
+                                                style="background-color: #008e3c;"
+                                                onclick="addCart('{{ $product['id'] }}')">Masukan Keranjang
+                                            </a>
+                                        @else
+                                            <a class="btn btn-success btn-sm saveToCart" href="javascript:void(0)"
+                                                style="background-color: #008e3c;">Masukan Keranjang
+                                            </a>
+                                        @endauth
                                     </a>
                                 </div>
                             </div>
