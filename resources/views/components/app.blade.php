@@ -26,7 +26,8 @@
     <link rel="stylesheet" href="{{ asset('assets') }}/style.css?t={{ time() }}">
 
     <!-- Web App Manifest -->
-    <link rel="manifest" href="{{ asset('assets') }}/manifest.json">
+    {{-- <link rel="manifest" href="{{ asset('assets') }}/manifest.json"> --}}
+    @livewireStyles
 </head>
 
 <body>
@@ -141,7 +142,7 @@
     <script src="{{ asset('assets') }}/js/isotope.pkgd.min.js"></script>
     <script src="{{ asset('assets') }}/js/dark-rtl.js"></script>
     <script src="{{ asset('assets') }}/js/active.js"></script>
-    <script src="{{ asset('assets') }}/js/pwa.js"></script>
+    {{-- <script src="{{ asset('assets') }}/js/pwa.js"></script> --}}
 
     @stack('js')
     <script>
@@ -339,6 +340,7 @@
             });
         });
     </script>
+    @livewireScripts
 </body>
 
 </html>

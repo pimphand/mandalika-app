@@ -158,6 +158,8 @@
                     });
                 }
             })
+
+            $('#filter_customer').remove();
         </script>
     @endpush
 </x-app>

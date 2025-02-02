@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'home'])->name('home');
-Route::get('/product/{id}', [\App\Http\Controllers\HomeController::class, 'product'])->name('product');
+Route::get('/product/{id}', [\App\Http\Controllers\HomeController::class, 'product'])->name(name: 'product');
 Route::get('/products', [\App\Http\Controllers\HomeController::class, 'products'])->name('products');
 
 Route::middleware('auth')->group(function () {

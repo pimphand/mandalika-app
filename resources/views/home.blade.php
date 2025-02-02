@@ -44,12 +44,12 @@
             <div class="card-body">
                 <div class="row g-3">
                     <div class="col-3">
-                        <div class="feature-card mx-auto text-center">
+                        <a class="feature-card mx-auto text-center" href="{{ route('products') }}">
                             <div class="card mx-auto bg-gray">
                                 <img src="{{ asset('icon/ic_produk.png') }}" alt="">
                             </div>
                             <p class="mb-0">Produk</p>
-                        </div>
+                        </a>
                     </div>
 
                     <div class="col-3">

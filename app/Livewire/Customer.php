@@ -10,7 +10,7 @@ class Customer extends Component
 {
     public string $search = '';
     public $isBlacklist;
-
+    public $route;
     use WithPagination;
 
 
@@ -24,20 +24,7 @@ class Customer extends Component
 
     public function render()
     {
-        $customers = \App\Models\Customer::withCount([
-            'orders as order_pending' => function ($query) {
-                $query->where('status', 'pending');
-            },
-            'orders as order_success' => function ($query) {
-                $query->where('status', 'success');
-            },
-            'orders as order_cancel' => function ($query) {
-                $query->where('status', 'cancel');
-            },
-            'orders as order_proses' => function ($query) {
-                $query->where('status', 'proses');
-            },
-        ])
+        $customers = \App\Models\Customer::query()
             ->when(!request()->routeIs('customer'), function ($query) {
                 $query->whereNotLike('is_blacklist', 'blacklist');
             })
@@ -45,9 +32,11 @@ class Customer extends Component
 
         if (isset($this->isBlacklist)) {
             $customers->where('is_blacklist', $this->isBlacklist);
+        } else {
+            $customers->whereUserId(auth()->id()); // filter by current user
         }
 
-        $customers = $customers->paginate(5);
+        $customers = $customers->paginate(7);
         return view('livewire.customer', ['customers' => $customers]);
     }
 }
