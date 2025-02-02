@@ -46,7 +46,7 @@
                     <div class="col-3">
                         <div class="feature-card mx-auto text-center">
                             <div class="card mx-auto bg-gray">
-                                <img src="{{ asset('assets') }}/img/demo-img/pwa.png" alt="">
+                                <img src="{{ asset('icon/ic_produk.png') }}" alt="">
                             </div>
                             <p class="mb-0">Produk</p>
                         </div>
@@ -55,7 +55,7 @@
                     <div class="col-3">
                         <div class="feature-card mx-auto text-center">
                             <div class="card mx-auto bg-gray">
-                                <img src="{{ asset('assets') }}/img/demo-img/pwa.png" alt="">
+                                <img src="{{ asset('icon/ic_artikel.png') }}" alt="">
                             </div>
                             <p class="mb-0">Artikel</p>
                         </div>
@@ -64,7 +64,7 @@
                     <div class="col-3">
                         <div class="feature-card mx-auto text-center">
                             <div class="card mx-auto bg-gray">
-                                <img src="{{ asset('assets') }}/img/demo-img/bootstrap.png" alt="">
+                                <img src="{{ asset('icon/ic_omset.png') }}" alt="">
                             </div>
                             <p class="mb-0">Omset</p>
                         </div>
@@ -73,7 +73,7 @@
                     <div class="col-3">
                         <div class="feature-card mx-auto text-center">
                             <div class="card mx-auto bg-gray">
-                                <img src="{{ asset('assets') }}/img/demo-img/js.png" alt="">
+                                <img src="{{ asset('icon/iz_compro.png') }}" alt="">
                             </div>
                             <p class="mb-0">Compro</p>
                         </div>

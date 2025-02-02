@@ -47,13 +47,13 @@
                         </div>
                         <!-- Info -->
                         <div class="chat-user-info">
-                            <h6 class="text-truncate mb-0">{{ $customer->name }}</h6>
+                            <h6 class="text-truncate mb-0">{{ $customer->store_name }}</h6>
                             <div class="last-chat d-flex justify-content-between align-items-center">
                                 <div>
                                     <p class="mb-0 text-truncate"
                                         style="overflow: hidden;text-overflow: ellipsis; white-space: nowrap">
                                         {{ Str::limit($customer->address, 30, '...') }}</p>
-                                    <p class="mb-0 text-truncate">Toko : {{ $customer->store_name }}</p>
+                                    <p class="mb-0 text-truncate">Pemilik : {{ $customer->name }}</p>
                                 </div>
                             </div>
                         </div>
