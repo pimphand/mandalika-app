@@ -133,4 +133,14 @@
             }
         </script>
     @endpush
+    @push('meta')
+        <meta property="og:title" content="{{ $product['data']['name'] }}">
+        <meta property="og:description" content="{{ $product['data']['description'] }}">
+        <meta property="og:image" content="{{ config('app.api_url') }}/storage/{{ $product['data']['image'] }}">
+        <meta property="og:type" content="product">
+        <meta property="og:site_name" content="Nama Situs Anda">
+        <meta property="og:category" content="{{ $product['data']['category'] }}">
+        <meta property="og:brand" content="{{ $product['data']['brand'] }}">
+    @endpush
+
 </x-app>

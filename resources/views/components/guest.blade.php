@@ -16,11 +16,21 @@
     <title>{{ env('APP_NAME') }} - {{ $title ?? 'Home' }}</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="{{ asset('assets') }}/img/core-img/favicon.ico">
-    <link rel="apple-touch-icon" href="{{ asset('assets') }}/img/icons/icon-96x96.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('assets') }}/img/icons/icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="167x167" href="{{ asset('assets') }}/img/icons/icon-167x167.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets') }}/img/icons/icon-180x180.png">
+    <!-- Open Graph untuk Facebook dan WhatsApp -->
+    <meta property="og:title" content="Mandalika Putra Bersama - Distributor  Oli Terpercaya di Indonesia">
+    <meta property="og:description"
+        content="Mandalika Putra Bersama menyediakan oli berkualitas untuk kendaraan Anda di Indonesia. Kunjungi kami untuk produk terbaik!">
+    <meta property="og:image" content="{{ asset('logo_.webp') }}">
+    <meta property="og:url" content="https://mandalikaputrabersama.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mandalika Putra Bersama - Distributor  Oli Terpercaya di Indonesia">
+    <meta name="twitter:description"
+        content="Mandalika Putra Bersama menyediakan oli berkualitas untuk kendaraan Anda di Indonesia. Kunjungi kami untuk produk terbaik!">
+    <meta name="twitter:image" content="{{ asset('logo_.webp') }}">
+    <meta name="twitter:site" content="@mandalikaputra">
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="{{ asset('assets') }}/style.css">
