@@ -9,11 +9,11 @@
                                 <!-- Product Thumbnail -->
                                 <a class="product-thumbnail d-block" href="{{ route('product', $product->id) }}">
                                     @if (!$product->image?->path)
-                                        <img class="_image_{{ $product->id }}"
-                                            src="{{ asset('assets/img/demo-img/funto.png') }}"
+                                        <img loading="lazy"class="_image_{{ $product->id }}"
+                                            src="{{ asset('logo_.png') }}?t={{ time() }}"
                                             alt="{{ $product->name }}">
                                     @else
-                                        <img src="{{ config('app.api_url') }}/storage/{{ $product->image->path }}"
+                                        <img loading="lazy"src="{{ config('app.api_url') }}/storage/{{ $product->image->path }}?t={{ time() }}"
                                             alt="{{ $product->name }}">
                                     @endif
                                 </a>

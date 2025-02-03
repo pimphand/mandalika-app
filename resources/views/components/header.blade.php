@@ -7,7 +7,7 @@
             <!-- Logo Wrapper -->
             <div class="logo-wrapper">
                 <a href="/" style="color: black">
-                    <img src="{{ asset('logo_.webp') }}" alt=""> Mandalika Putra Bersama
+                    <img loading="lazy"src="{{ asset('logo_.webp') }}" alt=""> Mandalika Putra Bersama
                 </a>
             </div>
             {{--
@@ -37,7 +37,7 @@
 
                 <!-- User Thumbnail -->
                 <div class="user-profile">
-                    <img src="{{ asset('assets') }}/img/bg-img/2.jpg" alt="">
+                    <img loading="lazy"src="{{ asset('assets') }}/img/bg-img/2.jpg" alt="">
                 </div>
 
                 <!-- User Info -->

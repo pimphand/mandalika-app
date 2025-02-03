@@ -8,12 +8,12 @@
                         <a href="{{ config('app.api_url') }}/storage/{{ $product['data']['image'] }}"
                             class="image-zooming-in-out" title="Product One" data-gall="gallery2">
                             @if ($product['data']['image'])
-                                <img class="image_{{ $product['data']['id'] }}"
-                                    src="{{ config('app.api_url') }}/storage/{{ $product['data']['image'] }}"
+                                <img loading="lazy"class="image_{{ $product['data']['id'] }}"
+                                    src="{{ config('app.api_url') }}/storage/{{ $product['data']['image'] }}?t={{ time() }}"
                                     alt="">
                             @else
-                                <img class="image_{{ $product['data']['id'] }}" src="{{ asset('logo_.webp') }}"
-                                    alt="">
+                                <img loading="lazy"class="image_{{ $product['data']['id'] }}"
+                                    src="{{ asset('logo_.webp') }}?t={{ time() }}" alt="">
                             @endif
                         </a>
                     </div>
@@ -65,7 +65,7 @@
                                     <!-- Product Thumbnail -->
                                     <a class="product-thumbnail d-block"
                                         href="{{ route('product', $recomended['id']) }}">
-                                        <img src="{{ config('app.api_url') }}/storage/{{ $recomended['image'] }}"
+                                        <img loading="lazy"src="{{ config('app.api_url') }}/storage/{{ $recomended['image'] }}?t={{ time() }}"
                                             alt="{{ $recomended['name'] }}">
                                         <!-- Badge -->
                                     </a>

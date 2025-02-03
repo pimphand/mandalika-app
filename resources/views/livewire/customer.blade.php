@@ -37,7 +37,7 @@
                     <a class="d-flex" href="javascript:void(0)">
                         <!-- Thumbnail -->
                         <div class="chat-user-thumbnail me-3 shadow">
-                            <img class="img-circle"
+                            <img loading="lazy"class="img-circle"
                                 src="{{ $customer->store_photo ? config('app.api_url') . '/' . $customer->store_photo : asset('assets/img/bg-img/user1.png') }}"
                                 alt="">
                             <span class="active-status"></span>

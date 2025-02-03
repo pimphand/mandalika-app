@@ -46,7 +46,7 @@
                     <div class="col-3">
                         <a class="feature-card mx-auto text-center" href="{{ route('products') }}">
                             <div class="card mx-auto bg-gray">
-                                <img src="{{ asset('icon/ic_produk.png') }}" alt="">
+                                <img loading="lazy"src="{{ asset('icon/ic_produk.png') }}" alt="">
                             </div>
                             <p class="mb-0">Produk</p>
                         </a>
@@ -55,7 +55,7 @@
                     <div class="col-3">
                         <div class="feature-card mx-auto text-center">
                             <div class="card mx-auto bg-gray">
-                                <img src="{{ asset('icon/ic_artikel.png') }}" alt="">
+                                <img loading="lazy"src="{{ asset('icon/ic_artikel.png') }}" alt="">
                             </div>
                             <p class="mb-0">Artikel</p>
                         </div>
@@ -64,7 +64,7 @@
                     <div class="col-3">
                         <div class="feature-card mx-auto text-center">
                             <div class="card mx-auto bg-gray">
-                                <img src="{{ asset('icon/ic_omset.png') }}" alt="">
+                                <img loading="lazy"src="{{ asset('icon/ic_omset.png') }}" alt="">
                             </div>
                             <p class="mb-0">Omset</p>
                         </div>
@@ -73,7 +73,7 @@
                     <div class="col-3">
                         <div class="feature-card mx-auto text-center">
                             <div class="card mx-auto bg-gray">
-                                <img src="{{ asset('icon/iz_compro.png') }}" alt="">
+                                <img loading="lazy"src="{{ asset('icon/iz_compro.png') }}" alt="">
                             </div>
                             <p class="mb-0">Compro</p>
                         </div>
@@ -111,7 +111,7 @@
                                     <!-- Product Thumbnail -->
                                     <a class="product-thumbnail d-block {{ $product['id'] }}"
                                         href="{{ route('product', $product['id']) }}">
-                                        <img class="_image_{{ $product['id'] }}"
+                                        <img loading="lazy"class="_image_{{ $product['id'] }}"
                                             src="{{ config('app.api_url') }}/storage/{{ $product['image'] }}"
                                             alt="">
                                         <!-- Badge -->

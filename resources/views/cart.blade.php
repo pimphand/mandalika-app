@@ -71,7 +71,7 @@
                         $('#list-cart').append(`
                         <tr>
                             <td>
-                                <img src="${value.image}" alt="${value.name}" style="width: 100px">
+                                <img loading="lazy"src="${value.image}" alt="${value.name}" style="width: 100px">
                             </td>
                             <td>
                                 <h6>${value.name}</h6>

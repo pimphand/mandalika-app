@@ -4,7 +4,7 @@
         <div class="card user-info-card mb-3">
             <div class="card-body d-flex align-items-center">
                 <div class="user-profile me-3">
-                    <img src="{{ asset('assets/img/bg-img/2.jpg') }}" alt="">
+                    <img loading="lazy"src="{{ asset('assets/img/bg-img/2.jpg') }}" alt="">
 
                 </div>
                 <div class="user-info">

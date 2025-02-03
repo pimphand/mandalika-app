@@ -112,7 +112,7 @@
                 @foreach ($categories as $category)
                     <div class="col-3">
                         <a href="#" class="category-item" data-category="{{ $category }}">
-                            <img src="{{ asset('icon/logo_product/' . $category) }}.webp" alt="">
+                            <img loading="lazy"src="{{ asset('icon/logo_product/' . $category) }}.webp" alt="">
                             <p class="mb-2 mt-1 text-truncate title" style="color: #000;">{{ $category }}</p>
                         </a>
                     </div>
