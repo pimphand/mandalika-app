@@ -36,7 +36,8 @@
                             style="background-color: #008e3c;" id="_add_to_cart" type="button">Tambah</button>
                     @else
                         <a class="btn btn-success btn-sm saveToCart" href="javascript:void(0)"
-                            style="background-color: #008e3c;">Masukan Keranjang
+                            data-katalog="{{ $product['data']['file'] }}" style="background-color: #008e3c;">Masukan
+                            Keranjang
                         </a>
                     @endauth
 
@@ -82,6 +83,7 @@
                                             Keranjang</a>
                                     @else
                                         <a class="btn btn-success btn-sm saveToCart" href="javascript:void(0)"
+                                            data-katalog="{{ $recomended['file'] }}"
                                             style="background-color: #008e3c;">Masukan Keranjang
                                         </a>
                                     @endauth

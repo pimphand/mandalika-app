@@ -50,9 +50,9 @@
                           </a>
                       </li>
                       <li>
-                          <a href="{{ route('login') }}">
+                          <a href="{{ config('app.api_url') }}/blogs" target="_blank">
                               <i class="bi bi-newspaper"></i>
-                              <span>Blog</span>
+                              <span>Artikel</span>
                           </a>
                       </li>
                       <li>

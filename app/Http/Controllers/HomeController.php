@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Customer;
+use App\Models\Sku;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
@@ -19,15 +20,29 @@ class HomeController extends Controller
 
         $getProduct = Http::get(config('app.api_url') . '/api/products');
         $products = $getProduct->json()['data'];
-
         return view('home', compact('data', 'products'));
     }
 
     public function products(Request $request)
     {
-        $get = Http::get(config('app.api_url') . '/api/products');
-        $data = $get->json();
-        return view('products', ['products' => $data]);
+        return view('products');
+    }
+
+    public function productsData(Request $request)
+    {
+        $products = Sku::with(['image', 'product'])
+            ->whereAny(['name', 'description'], 'LIKE', "%$request->search%")
+            // ->orWhereHas('product', function ($query) use ($request) {
+            //     $query->where('name', 'LIKE', "%$request->search%");
+            // })
+            ->when($request->category, function ($query) use ($request) {
+                $query->whereHas("product", function ($query) use ($request) {
+                    $query->where('name', $request->category);
+                });
+            })
+            ->inRandomOrder()
+            ->paginate(10);
+        return view('livewire.list-product', ['products' => $products]);
     }
 
     public function product($id): Application|Factory|View

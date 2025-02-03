@@ -141,8 +141,12 @@
                     <div class="modal-body text-center">
                         <p>Silakan login untuk menyimpan pesanan atau langsung hubungi admin via WhatsApp.</p>
                         <a class="btn btn-sm btn-primary mb-2" href="{{ route('login') }}">Login</a>
+                        <a class="btn btn-sm btn-warning mb-2" style="color: #fff;display:none" target="_blank"
+                            id="downloadKatalog"><i class="bi bi-download"></i>
+                            Katalok</a>
                         <a class="btn btn-sm btn-success whatsapp_modal mb-2" href="" target="_blank">Chat
                             Admin</a>
+
                     </div>
                 </div>
             </div>
@@ -367,30 +371,40 @@
         </script>
     @else
         <script>
-            $('.saveToCart').on('click', function() {
-                // Dapatkan elemen card terdekat
-                const card = $(this).closest('.card-body');
+            $(document).ready(function() {
+                $(document).on('click', '.saveToCart', function() {
+                    const catalog = $(this).data('katalog');
+                    // Dapatkan elemen card terdekat
+                    const card = $(this).closest('.card-body');
 
-                // Ambil informasi produk
-                const name = card.find('.name').text().trim();
-                const brand = card.find('.brand').text().trim();
-                const category = card.find('.category').text().split('\n')[0].trim();
-                const packaging = card.find('.packaging').text().trim();
+                    // Ambil informasi produk
+                    const name = card.find('.name').text().trim();
+                    const brand = card.find('.brand').text().trim();
+                    const category = card.find('.category').text().split('\n')[0].trim();
+                    const packaging = card.find('.packaging').text().trim();
 
-                // Format pesan WhatsApp
-                const message = `Hallo, saya mau bertanya mengenai:%0A
+                    // Format pesan WhatsApp
+                    const message = `Hallo, saya mau bertanya mengenai:%0A
 Nama: ${name}%0A
 Brand: ${brand}%0A
 Kemasan: ${packaging}`;
 
-                // Generate URL WhatsApp
-                const whatsappUrl = `https://wa.me/6282258443104/?text=${message}`;
+                    // Generate URL WhatsApp
+                    const whatsappUrl = `https://wa.me/6282258443104/?text=${message}`;
 
-                // Set href pada modal atau redirect langsung
-                $('.whatsapp_modal').attr('href', whatsappUrl);
+                    // Set href pada modal atau redirect langsung
+                    $('.whatsapp_modal').attr('href', whatsappUrl);
 
-                // Tampilkan modal (jika diperlukan)
-                $("#staticBackdrop").modal('show');
+                    if (catalog) {
+                        // Set href pada tombol download katalog
+                        $('#downloadKatalog').attr('href', '{{ config('app.api_url') }}/storage/' + catalog);
+                        $('#downloadKatalog').show();
+                    } else {
+                        $('#downloadKatalog').hide();
+                    }
+                    // Tampilkan modal (jika diperlukan)
+                    $("#staticBackdrop").modal('show');
+                });
             });
         </script>
     @endauth

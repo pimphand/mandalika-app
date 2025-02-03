@@ -131,7 +131,8 @@
                                                 onclick="addCart('{{ $product['id'] }}')">Masukan Keranjang
                                             </a>
                                         @else
-                                            <a class="btn btn-success btn-sm saveToCart" href="javascript:void(0)"
+                                            <a class="btn btn-success btn-sm saveToCart"
+                                                data-katalog="{{ $product['file'] }}" href="javascript:void(0)"
                                                 style="background-color: #008e3c;">Masukan Keranjang
                                             </a>
                                         @endauth
