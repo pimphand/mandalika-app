@@ -103,7 +103,7 @@
             </div>
 
             @php
-                $categories = ['DENZOIL', 'EURO1', 'TRYON', 'VINOLI'];
+                $categories = ['DENZOIL', 'VINOLI', 'EURO1', 'TRYON'];
             @endphp
             <!-- User Status Slide -->
 
