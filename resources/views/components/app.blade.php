@@ -14,6 +14,9 @@
 
     <!-- Title -->
     <title>{{ env('APP_NAME') }} - Mobile</title>
+    {{-- faficon --}}
+    <link rel="icon" href="{{ asset('logo_.ico') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('logo_.ico') }}" type="image/x-icon">
 
 
     @if (request()->is('product/*'))
