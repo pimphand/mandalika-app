@@ -3,7 +3,7 @@
         <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
             <div class="row">
                 @foreach ($chunk as $product)
-                    <div class="col-4 col-sm-3 col-lg-3">
+                    <div class="col-6 col-sm-6 col-lg-3">
                         <div class="card single-product-card">
                             <div class="card-body p-3">
                                 <!-- Product Thumbnail -->
