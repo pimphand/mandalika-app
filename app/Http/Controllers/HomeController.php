@@ -41,7 +41,7 @@ class HomeController extends Controller
                 });
             })
             ->inRandomOrder()
-            ->paginate(10);
+            ->paginate(12);
         return view('livewire.list-product', ['products' => $products]);
     }
 

@@ -1,9 +1,9 @@
 <div class="card">
-    @forelse ($products->chunk(10) as $key => $chunk)
+    @forelse ($products->chunk(12) as $key => $chunk)
         <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-            <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-6 g-3">
+            <div class="row">
                 @foreach ($chunk as $product)
-                    <div class="col">
+                    <div class="col-4 col-sm-3 col-lg-3">
                         <div class="card single-product-card">
                             <div class="card-body p-3">
                                 <!-- Product Thumbnail -->

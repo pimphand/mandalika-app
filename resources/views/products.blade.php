@@ -82,6 +82,17 @@
         .category-item.aktif p {
             color: #fff !important;
         }
+
+        .swiper-container {
+            width: 100%;
+            overflow: hidden;
+            padding: 10px 0;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            width: auto;
+        }
     </style>
     <div class="pt-3"></div>
 
@@ -107,16 +118,19 @@
             @endphp
             <!-- User Status Slide -->
 
-            <div class="mb-2 row">
-                <!-- Single Slide -->
-                @foreach ($categories as $category)
-                    <div class="col-3">
-                        <a href="#" class="category-item" data-category="{{ $category }}">
-                            <img loading="lazy"src="{{ asset('icon/logo_product/' . $category) }}.webp" alt="">
-                            <p class="mb-2 mt-1 text-truncate title" style="color: #000;">{{ $category }}</p>
-                        </a>
-                    </div>
-                @endforeach
+            <div class="swiper-container flex">
+                <div class="swiper-wrapper">
+                    @foreach ($categories as $category)
+                        <div class="swiper-slide">
+                            <a href="#" class="category-item" data-category="{{ $category }}">
+                                <img loading="lazy" src="{{ asset('icon/logo_product/' . $category) }}.webp"
+                                    alt="">
+                                <p class="mb-2 mt-1 text-truncate title" style="color: #000;">{{ $category }}</p>
+                            </a>
+                        </div>
+                    @endforeach
+
+                </div>
             </div>
 
             <!-- Carousel -->
@@ -128,6 +142,10 @@
     </div>
 
     @push('js')
+        <!-- Tambahkan Swiper.js CDN -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
         <script>
             function getData(category = null, page = 1) {
                 $("#loadingSpinner").show(); // Tampilkan spinner sebelum AJAX request
@@ -179,6 +197,30 @@
                 var page = $(this).data('page'); // Ambil nomor halaman
                 var category = $("#category").val(); // Ambil nilai kategori jika diperlukan
                 getData(category, page); // Panggil fungsi getData dengan parameter halaman
+            });
+
+
+            document.addEventListener("DOMContentLoaded", function() {
+                var swiper = new Swiper(".swiper-container", {
+                    slidesPerView: 4, // Menampilkan 4 kategori sekaligus
+                    spaceBetween: 10,
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                    mousewheel: {
+                        forceToAxis: true, // Agar hanya scroll horizontal, bukan vertikal
+                        sensitivity: 1,
+                    },
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 4
+                        }, // Di layar besar, tampilkan 4 kategori
+                        480: {
+                            slidesPerView: 2
+                        } // Di layar kecil, tampilkan 2 kategori
+                    }
+                });
             });
         </script>
     @endpush
