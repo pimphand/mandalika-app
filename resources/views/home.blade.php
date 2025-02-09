@@ -61,7 +61,7 @@
                     <div class="col-3">
                         <div class="feature-card mx-auto text-center">
                             <div class="card mx-auto bg-gray">
-                                <img loading="lazy"src="{{ asset('icon/iz_compro.png') }}" alt="">
+                                <img loading="lazy" src="{{ asset('icon/iz_compro.png') }}" alt="">
                             </div>
                             <p class="mb-0">Compro</p>
                         </div>

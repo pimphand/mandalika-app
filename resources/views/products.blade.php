@@ -114,18 +114,18 @@
             </div>
 
             @php
-                $categories = ['DENZOIL', 'VINOLI', 'EURO1', 'TRYON'];
+                $brands = \Illuminate\Support\Facades\DB::table('brands')->get();
             @endphp
             <!-- User Status Slide -->
 
             <div class="swiper-container flex">
                 <div class="swiper-wrapper">
-                    @foreach ($categories as $category)
+                    @foreach ($brands as $brand)
                         <div class="swiper-slide">
-                            <a href="#" class="category-item" data-category="{{ $category }}">
-                                <img loading="lazy" src="{{ asset('icon/logo_product/' . $category) }}.webp"
+                            <a href="#" class="category-item" data-category="{{ $brand->name }}">
+                                <img loading="lazy" src="{{ config('app.api_url') }}/storage/{{ $brand->logo }}?t={{ time() }}"
                                     alt="">
-                                <p class="mb-2 mt-1 text-truncate title" style="color: #000;">{{ $category }}</p>
+                                <p class="mb-2 mt-1 text-truncate title" style="color: #000;">{{ $brand->name }}</p>
                             </a>
                         </div>
                     @endforeach
