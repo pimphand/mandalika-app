@@ -20,6 +20,7 @@ class HomeController extends Controller
 
         $getProduct = Http::get(config('app.api_url') . '/api/products');
         $products = $getProduct->json()['data'];
+//        dd($products);
         return view('home', compact('data', 'products'));
     }
 
@@ -42,6 +43,7 @@ class HomeController extends Controller
             })
             ->inRandomOrder()
             ->paginate(12);
+
         return view('livewire.list-product', ['products' => $products]);
     }
 
@@ -74,7 +76,7 @@ class HomeController extends Controller
             'name' => 'required',
             'phone' => 'required|numeric',
             'address' => 'required',
-            'owner_address' => 'required',
+//            'owner_address' => 'required',
             'store_name' => 'required',
             'npwp' => 'nullable',
             'others' => 'nullable',
@@ -85,7 +87,7 @@ class HomeController extends Controller
             'phone.required' => 'Nomor telepon wajib diisi',
             'phone.numeric' => 'Nomor telepon harus berupa angka',
             'address.required' => 'Alamat wajib diisi',
-            'owner_address.required' => 'Alamat pemilik wajib diisi',
+//            'owner_address.required' => 'Alamat pemilik wajib diisi',
             'store_name.required' => 'Nama toko wajib diisi',
             'store_photo.required' => 'Foto toko wajib diisi',
             'store_photo.image' => 'Foto toko harus berupa gambar',
