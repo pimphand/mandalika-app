@@ -18,7 +18,7 @@ class HomeController extends Controller
         $get = Http::get(config('app.api_url') . '/api/banners');
         $data = $get->json();
 
-        $getProduct = Http::get(config('app.api_url') . '/api/products');
+        $getProduct = Http::get(config('app.api_url') . '/api/products?home=true');
         $products = $getProduct->json()['data'];
 //        dd($products);
         return view('home', compact('data', 'products'));
