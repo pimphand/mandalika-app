@@ -58,14 +58,25 @@
                         </div>
                     @endauth
 
-                    <div class="col-3">
-                        <div class="feature-card mx-auto text-center">
-                            <div class="card mx-auto bg-gray">
-                                <img loading="lazy" src="{{ asset('icon/iz_compro.png') }}" alt="">
-                            </div>
-                            <p class="mb-0">Compro</p>
+                    @if($about)
+                        <div class="col-3">
+                            <a href="{{config('')}}/storage/{{$about['data']['profile']}}" target="_blank" class="feature-card mx-auto text-center">
+                                <div class="card mx-auto bg-gray">
+                                    <img loading="lazy" src="{{ asset('icon/iz_compro.png') }}" alt="">
+                                </div>
+                                <p class="mb-0">Compro</p>
+                            </a>
                         </div>
-                    </div>
+                    @else
+                        <div class="col-3">
+                            <a href="" class="feature-card mx-auto text-center">
+                                <div class="card mx-auto bg-gray">
+                                    <img loading="lazy" src="{{ asset('icon/iz_compro.png') }}" alt="">
+                                </div>
+                                <p class="mb-0">Compro</p>
+                            </a>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>

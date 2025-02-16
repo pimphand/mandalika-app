@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
 use App\Models\Customer;
 use App\Models\Sku;
 use Illuminate\Contracts\View\Factory;
@@ -20,8 +21,15 @@ class HomeController extends Controller
 
         $getProduct = Http::get(config('app.api_url') . '/api/products?home=true');
         $products = $getProduct->json()['data'];
-//        dd($products);
-        return view('home', compact('data', 'products'));
+
+        $about = About::where('type', 'profile')->first();
+        if ($about){
+            $about->content = json_decode($about->content);
+        }else{
+            $about = [];
+        }
+
+        return view('home', compact('data', 'products','about'));
     }
 
     public function products(Request $request)
