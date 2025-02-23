@@ -9,7 +9,6 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 
 class HomeController extends Controller
@@ -23,13 +22,13 @@ class HomeController extends Controller
         $products = $getProduct->json()['data'];
 
         $about = About::where('type', 'profile')->first();
-        if ($about){
+        if ($about) {
             $about->content = json_decode($about->content);
-        }else{
+        } else {
             $about = [];
         }
 
-        return view('home', compact('data', 'products','about'));
+        return view('home', compact('data', 'products', 'about'));
     }
 
     public function products(Request $request)
@@ -139,6 +138,7 @@ class HomeController extends Controller
             return response()->json(['error' => $e->getMessage()]);
         }
     }
+
     public function listOrders(Request $request)
     {
         return view('orders');
@@ -149,8 +149,25 @@ class HomeController extends Controller
         return view('person');
     }
 
-    public function success($id)
+    public function updateOrder(Request $request, $id)
     {
-        ///
+        $fileName = null;
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
+            $filePath = $file->store('orders/file', 'public'); // Stores in storage/app/public/orders/file
+            $fileName = asset('storage/' . $filePath); // Generates a public URL
+        }
+
+        $get = Http::withToken(session('token'))
+            ->acceptJson()
+            ->put(config('app.api_url') . '/api/orders/' . $id, array_merge($request->except('file'), ['file' => $fileName]));
+
+
+        if ($get->status() == 200) {
+            return response()->json(['message' => 'Berhasil mengubah order']);
+        }else{
+            return response()->json($get->json(), 422);
+        }
+
     }
 }

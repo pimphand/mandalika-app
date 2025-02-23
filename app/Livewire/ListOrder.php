@@ -3,6 +3,9 @@
 namespace App\Livewire;
 
 use App\Models\Order;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Http;
 use Livewire\Component;
 
@@ -14,8 +17,15 @@ class ListOrder extends Component
     public string $ids = '';
     public string $status = '';
     public $statusUpdate = '';
-    protected $listeners = ['changeStatus'];
-    public function render()
+
+    public string $retur = '';
+
+    public function setRetur($value)
+    {
+        $this->retur = $value;
+    }
+    protected $listeners = ['changeStatus','setRetur'];
+    public function render(): View|Factory|Application
     {
         $orders = Http::withToken(session('token'))->get(config('app.api_url')
             . '/api/orders?customer=' . $this->customer
@@ -23,6 +33,7 @@ class ListOrder extends Component
             . '&status=' . $this->status
             . '&id=' . $this->ids);
         $orders = $orders->json();
+//        dd($orders);
         return view('livewire.list-order', ['orders' => $orders]);
     }
 

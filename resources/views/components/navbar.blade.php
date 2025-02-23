@@ -4,13 +4,14 @@
           <!-- Footer Content -->
           <div class="footer-nav position-relative">
               <ul class="h-100 d-flex align-items-center justify-content-between ps-0">
+                  @if(session('role') == "sales")
                   <li class="active">
                       <a href="/">
                           <i class="bi bi-house"></i>
                           <span>Beranda</span>
                       </a>
                   </li>
-
+                    @endif
                   @auth
                       <li>
                           <a href="{{ route('orders') }}">
@@ -19,13 +20,14 @@
                           </a>
                       </li>
 
-
-                      <li>
-                          <a href="{{ route('cart') }}">
-                              <i class="bi bi-cart"></i>
-                              <span>Keranjang</span>
-                          </a>
-                      </li>
+                      @if(session('role') == "sales")
+                          <li>
+                              <a href="{{ route('cart') }}">
+                                  <i class="bi bi-cart"></i>
+                                  <span>Keranjang</span>
+                              </a>
+                          </li>
+                      @endif
 
                       <li>
                           <a href="{{ route('customer') }}">

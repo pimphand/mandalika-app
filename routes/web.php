@@ -11,6 +11,8 @@ Route::get('/productsData', [\App\Http\Controllers\HomeController::class, 'produ
 
 Route::middleware('auth')->group(function () {
     Route::post('/orders', [\App\Http\Controllers\HomeController::class, 'orders']);
+    Route::post('/orders/{id}', [\App\Http\Controllers\HomeController::class, 'updateOrder'])->name('orders.update');
+
     Route::get('/orders', [\App\Http\Controllers\HomeController::class, 'listOrders'])->name('orders');
 
     Route::get('/acccount', [\App\Http\Controllers\HomeController::class, 'acccount'])->name('acccount');
