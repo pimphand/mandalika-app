@@ -154,7 +154,7 @@ class HomeController extends Controller
         $fileName = null;
         if ($request->hasFile('file')) {
             $file = $request->file('file');
-            $filePath = $file->store('orders/file', 'public'); // Stores in storage/app/public/orders/file
+            $filePath = $file->store('orders-/file', 'public'); // Stores in storage/app/public/orders/file
             $fileName = asset('storage/' . $filePath); // Generates a public URL
         }
 

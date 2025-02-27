@@ -186,7 +186,7 @@
                                                         <th>Produk</th>
                                                         <th>Kemasan</th>
                                                         <th>Jumlah</th>
-                                                        <th>Jumlah Kembali</th>
+                                                        <th>Jumlah Returs</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -230,12 +230,8 @@
                                             <span><strong>Catatan : `</strong> {{$order['note']}}</span>
                                         @else
                                             <button class="btn bg-primary btn-show text-white returBtn"
-                                                    data-type="retur"
-                                                    data-id="{{$order['id']}}">Retur
-                                            </button>
-                                            <button class="btn bg-primary btn-show text-white returBtn"
                                                     data-type="terkirim"
-                                                    data-id="{{$order['id']}}">Terkirim
+                                                    data-id="{{$order['id']}}">Proses
                                             </button>
                                             {{--button saveReturn--}}
                                             <button class="btn bg-primary btn-show text-white save"
