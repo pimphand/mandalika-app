@@ -12,10 +12,12 @@
                 </div>
 
                 <div class="mb-3">
-                    <span wire:click="$set('status', 'pending')" style="color: #fff;" data-bs-toggle="tooltip"
-                          data-bs-placement="right"
-                          data-bs-original-title="Orderan yg baru di ajukan oleh sales namun blm di approve oleh admin"
-                          class="btn mb-1 badge bg-primary status-btn" onclick="setActive(this)">Pending</span>
+                    @if(session('role') == 'sales')
+                        <span wire:click="$set('status', 'pending')" style="color: #fff;" data-bs-toggle="tooltip"
+                              data-bs-placement="right"
+                              data-bs-original-title="Orderan yg baru di ajukan oleh sales namun blm di approve oleh admin"
+                              class="btn mb-1 badge bg-primary status-btn" onclick="setActive(this)">Pending</span>
+                    @endif
                     <span wire:click="$set('status', 'process')" style="color: #fff;" data-bs-toggle="tooltip"
                           data-bs-placement="right"
                           data-bs-original-title="Orderan yg telah di approve oleh admin dan akan di kirimkan ke toko"

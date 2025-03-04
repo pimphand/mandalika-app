@@ -8,6 +8,7 @@ use App\Models\Sku;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
@@ -71,7 +72,7 @@ class HomeController extends Controller
         return view('customer');
     }
 
-    public function customerData(Request $request): \Illuminate\Http\JsonResponse
+    public function customerData(Request $request): JsonResponse
     {
         $data = Customer::whereAny(['name', 'email', 'address', 'owner_address'], 'LIKE', "%$request->search%")->get();
         return response()->json($data);
@@ -139,17 +140,17 @@ class HomeController extends Controller
         }
     }
 
-    public function listOrders(Request $request)
+    public function listOrders(Request $request): View|Factory|Application
     {
         return view('orders');
     }
 
-    public function acccount(Request $request)
+    public function acccount(Request $request): View|Factory|Application
     {
         return view('person');
     }
 
-    public function updateOrder(Request $request, $id)
+    public function updateOrder(Request $request, $id): JsonResponse
     {
         $fileName = null;
         if ($request->hasFile('file')) {
