@@ -1,0 +1,12 @@
+[18-Feb-2025 07:45:38 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Livewire\Component" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Livewire/Auth/Login.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Livewire/Auth/Login.php on line 9
+[23-Feb-2025 02:12:13 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Livewire\Component" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Livewire/Auth/Login.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Livewire/Auth/Login.php on line 9
+[26-Feb-2025 10:37:02 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Livewire\Component" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Livewire/Auth/Login.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Livewire/Auth/Login.php on line 9

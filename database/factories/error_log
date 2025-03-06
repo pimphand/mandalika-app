@@ -1,0 +1,8 @@
+[16-Feb-2025 00:23:25 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Factories\Factory" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/database/factories/UserFactory.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/database/factories/UserFactory.php on line 12
+[26-Feb-2025 13:02:45 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Factories\Factory" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/database/factories/UserFactory.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/database/factories/UserFactory.php on line 12

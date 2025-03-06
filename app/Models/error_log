@@ -1,0 +1,88 @@
+[11-Feb-2025 11:20:26 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Image.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Image.php on line 9
+[11-Feb-2025 19:41:19 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Order.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Order.php on line 7
+[12-Feb-2025 00:54:36 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Customer.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Customer.php on line 8
+[12-Feb-2025 18:30:58 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Product.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Product.php on line 8
+[13-Feb-2025 04:13:00 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Category.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Category.php on line 8
+[13-Feb-2025 16:20:11 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Auth\User" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/User.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/User.php on line 10
+[13-Feb-2025 22:28:31 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Sku.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Sku.php on line 8
+[17-Feb-2025 01:44:35 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Auth\User" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/User.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/User.php on line 10
+[20-Feb-2025 20:25:46 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/About.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/About.php on line 7
+[22-Feb-2025 14:00:06 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Category.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Category.php on line 8
+[22-Feb-2025 14:00:07 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Image.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Image.php on line 9
+[22-Feb-2025 14:10:34 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Sku.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Sku.php on line 8
+[23-Feb-2025 00:20:47 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Auth\User" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/User.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/User.php on line 10
+[23-Feb-2025 00:24:59 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/About.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/About.php on line 7
+[23-Feb-2025 00:26:18 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Product.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Product.php on line 8
+[26-Feb-2025 10:42:20 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Category.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Category.php on line 8
+[26-Feb-2025 10:43:06 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/About.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/About.php on line 7
+[26-Feb-2025 10:44:12 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Customer.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Customer.php on line 8
+[26-Feb-2025 10:46:14 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Order.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Order.php on line 7
+[26-Feb-2025 10:48:11 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Image.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Image.php on line 9
+[26-Feb-2025 10:54:11 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Sku.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/Sku.php on line 8
+[26-Feb-2025 10:55:00 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Auth\User" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/User.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Models/User.php on line 10

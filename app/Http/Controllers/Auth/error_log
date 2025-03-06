@@ -1,0 +1,104 @@
+[20-Feb-2025 17:23:38 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/ConfirmablePasswordController.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/ConfirmablePasswordController.php on line 12
+[20-Feb-2025 22:08:04 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/PasswordResetLinkController.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/PasswordResetLinkController.php on line 11
+[22-Feb-2025 09:38:36 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/AuthenticatedSessionController.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/AuthenticatedSessionController.php on line 13
+[22-Feb-2025 17:20:19 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/NewPasswordController.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/NewPasswordController.php on line 16
+[23-Feb-2025 10:22:38 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/PasswordController.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/PasswordController.php on line 11
+[23-Feb-2025 10:25:32 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/PasswordResetLinkController.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/PasswordResetLinkController.php on line 11
+[23-Feb-2025 10:39:29 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/VerifyEmailController.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/VerifyEmailController.php on line 10
+[23-Feb-2025 13:53:18 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/EmailVerificationPromptController.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/EmailVerificationPromptController.php on line 10
+[23-Feb-2025 14:32:03 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/ConfirmablePasswordController.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/ConfirmablePasswordController.php on line 12
+[23-Feb-2025 14:35:23 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/EmailVerificationNotificationController.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/EmailVerificationNotificationController.php on line 9
+[23-Feb-2025 14:44:12 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/AuthenticatedSessionController.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/AuthenticatedSessionController.php on line 13
+[25-Feb-2025 01:17:15 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/VerifyEmailController.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/VerifyEmailController.php on line 10
+[25-Feb-2025 06:01:50 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/RegisteredUserController.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/RegisteredUserController.php on line 15
+[25-Feb-2025 16:56:08 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/AuthenticatedSessionController.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/AuthenticatedSessionController.php on line 13
+[26-Feb-2025 01:01:58 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/NewPasswordController.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/NewPasswordController.php on line 16
+[26-Feb-2025 11:16:29 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/PasswordController.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/PasswordController.php on line 11
+[26-Feb-2025 11:16:49 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/AuthenticatedSessionController.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/AuthenticatedSessionController.php on line 13
+[26-Feb-2025 11:16:57 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/EmailVerificationNotificationController.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/EmailVerificationNotificationController.php on line 9
+[26-Feb-2025 11:17:19 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/EmailVerificationPromptController.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/EmailVerificationPromptController.php on line 10
+[26-Feb-2025 11:19:24 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/RegisteredUserController.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/RegisteredUserController.php on line 15
+[26-Feb-2025 11:37:55 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/PasswordResetLinkController.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/PasswordResetLinkController.php on line 11
+[26-Feb-2025 11:37:57 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/ConfirmablePasswordController.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/ConfirmablePasswordController.php on line 12
+[26-Feb-2025 11:38:32 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/NewPasswordController.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/NewPasswordController.php on line 16
+[26-Feb-2025 11:38:55 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/VerifyEmailController.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/VerifyEmailController.php on line 10
+[03-Mar-2025 08:38:57 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/EmailVerificationPromptController.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/EmailVerificationPromptController.php on line 10
+[06-Mar-2025 01:47:35 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "App\Http\Controllers\Controller" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/EmailVerificationNotificationController.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/app/Http/Controllers/Auth/EmailVerificationNotificationController.php on line 9

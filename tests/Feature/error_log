@@ -1,0 +1,12 @@
+[16-Feb-2025 12:20:30 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function it() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/tests/Feature/ExampleTest.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/tests/Feature/ExampleTest.php on line 3
+[16-Feb-2025 21:06:23 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function test() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/tests/Feature/ProfileTest.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/tests/Feature/ProfileTest.php on line 5
+[19-Feb-2025 23:30:29 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function it() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/tests/Feature/ExampleTest.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/tests/Feature/ExampleTest.php on line 3

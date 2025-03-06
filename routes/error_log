@@ -1,0 +1,16 @@
+[11-Feb-2025 10:32:54 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/routes/auth.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/routes/auth.php on line 14
+[11-Feb-2025 12:52:42 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Artisan" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/routes/console.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/routes/console.php on line 6
+[14-Feb-2025 00:00:06 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/routes/web.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/routes/web.php on line 6
+[22-Feb-2025 12:13:34 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Artisan" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/routes/console.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/routes/console.php on line 6
