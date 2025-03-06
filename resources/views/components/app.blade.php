@@ -417,7 +417,6 @@ Kemasan: ${packaging}`;
                     } else {
                         $('#downloadKatalog').hide();
                     }
-                    // Tampilkan modal (jika diperlukan)
                     $("#staticBackdrop").modal('show');
                 });
             });
