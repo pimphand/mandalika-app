@@ -106,3 +106,183 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/logging.php on line 21
+[06-Mar-2025 13:56:24 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/database.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/database.php on line 19
+[06-Mar-2025 13:56:24 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/app.php on line 16
+[06-Mar-2025 13:56:24 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/auth.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/auth.php on line 17
+[06-Mar-2025 13:56:24 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/cache.php on line 18
+[06-Mar-2025 13:56:24 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/livewire.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/livewire.php on line 29
+[06-Mar-2025 13:56:25 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/session.php on line 21
+[06-Mar-2025 13:56:25 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/queue.php on line 16
+[06-Mar-2025 13:56:25 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/logging.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/logging.php on line 21
+[06-Mar-2025 13:56:25 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/mail.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/mail.php on line 17
+[06-Mar-2025 13:56:32 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/database.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/database.php on line 19
+[06-Mar-2025 13:56:32 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/cache.php on line 18
+[06-Mar-2025 13:56:32 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/app.php on line 16
+[06-Mar-2025 13:56:32 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/livewire.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/livewire.php on line 29
+[06-Mar-2025 13:56:33 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/auth.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/auth.php on line 17
+[06-Mar-2025 13:56:33 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/logging.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/logging.php on line 21
+[06-Mar-2025 13:56:33 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/queue.php on line 16
+[06-Mar-2025 13:56:34 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/session.php on line 21
+[06-Mar-2025 13:56:35 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/mail.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/mail.php on line 17
+[06-Mar-2025 13:56:41 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/cache.php on line 18
+[06-Mar-2025 13:56:41 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/livewire.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/livewire.php on line 29
+[06-Mar-2025 13:56:41 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/database.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/database.php on line 19
+[06-Mar-2025 13:56:41 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/app.php on line 16
+[06-Mar-2025 13:56:42 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/auth.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/auth.php on line 17
+[06-Mar-2025 13:56:43 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/logging.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/logging.php on line 21
+[06-Mar-2025 13:56:44 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/queue.php on line 16
+[06-Mar-2025 13:56:44 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/session.php on line 21
+[06-Mar-2025 13:56:45 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/mail.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/mail.php on line 17
+[06-Mar-2025 13:56:52 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/cache.php on line 18
+[06-Mar-2025 13:56:52 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/livewire.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/livewire.php on line 29
+[06-Mar-2025 13:56:52 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/database.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/database.php on line 19
+[06-Mar-2025 13:56:52 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/app.php on line 16
+[06-Mar-2025 13:56:52 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/auth.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/auth.php on line 17
+[06-Mar-2025 13:56:54 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/session.php on line 21
+[06-Mar-2025 13:56:54 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/queue.php on line 16
+[06-Mar-2025 13:56:55 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/logging.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/logging.php on line 21
+[06-Mar-2025 13:56:56 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/mail.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/mail.php on line 17
+[06-Mar-2025 13:57:04 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/database.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/database.php on line 19
+[06-Mar-2025 13:57:04 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/cache.php on line 18
+[06-Mar-2025 13:57:04 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/app.php on line 16
+[06-Mar-2025 13:57:04 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/livewire.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/livewire.php on line 29
+[06-Mar-2025 13:57:05 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/auth.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/auth.php on line 17
+[06-Mar-2025 13:57:06 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/session.php on line 21
+[06-Mar-2025 13:57:08 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/logging.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/logging.php on line 21
+[06-Mar-2025 13:57:08 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/queue.php on line 16
+[06-Mar-2025 13:57:09 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/mail.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/config/mail.php on line 17
