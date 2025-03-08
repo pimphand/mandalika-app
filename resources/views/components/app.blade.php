@@ -475,7 +475,7 @@ Kemasan: ${packaging}`;
                 if (agentContainer) {
                     let embeddedAgent = agentContainer.querySelector('.embedded-agent-container');
                     if (embeddedAgent) {
-                        embeddedAgent.style.bottom = "90px"; // Sesuaikan posisi jika perlu
+                        embeddedAgent.style.bottom = "60px"; // Sesuaikan posisi jika perlu
                         embeddedAgent.style.right = "5px"; // Posisikan di sudut kanan bawah
                     } else {
                         console.warn("Elemen .embedded-agent-container tidak ditemukan di dalam agentContainer.");
@@ -483,7 +483,7 @@ Kemasan: ${packaging}`;
                 } else {
                     console.warn("Elemen JotformAgent tidak ditemukan.");
                 }
-            }, 2000);
+            }, 1000);
         });
 
     </script>
