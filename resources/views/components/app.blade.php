@@ -473,8 +473,13 @@ Kemasan: ${packaging}`;
             setTimeout(function() {
                 let agentContainer = document.getElementById("JotformAgent-01956a1913957cf5b064b5234426a6002342");
                 if (agentContainer) {
-                    agentContainer.style.bottom = "20px"; // Sesuaikan posisi jika perlu
-                    agentContainer.style.right = "20px"; // Posisikan di sudut kanan bawah
+                    let embeddedAgent = agentContainer.querySelector('.embedded-agent-container');
+                    if (embeddedAgent) {
+                        embeddedAgent.style.bottom = "90px"; // Sesuaikan posisi jika perlu
+                        embeddedAgent.style.right = "5px"; // Posisikan di sudut kanan bawah
+                    } else {
+                        console.warn("Elemen .embedded-agent-container tidak ditemukan di dalam agentContainer.");
+                    }
                 } else {
                     console.warn("Elemen JotformAgent tidak ditemukan.");
                 }
