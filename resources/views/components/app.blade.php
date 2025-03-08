@@ -446,18 +446,40 @@ Kemasan: ${packaging}`;
                 },
                 isVoice: undefined
             });
-        });
-        //delay 3 detik
-        setTimeout(function() {
-            let agentContainer = $('.embedded-agent-container');
+        });window.addEventListener("DOMContentLoaded", function() {
+            window.AgentInitializer.init({
+                agentRenderURL: "https://agent.jotform.com/01956a1913957cf5b064b5234426a6002342",
+                rootId: "JotformAgent-01956a1913957cf5b064b5234426a6002342",
+                formID: "01956a1913957cf5b064b5234426a6002342",
+                queryParams: ["skipWelcome=1", "maximizable=1"],
+                domain: "https://www.jotform.com",
+                isDraggable: true,
+                background: "linear-gradient(180deg, #035C5F 0%, #035C5F 100%)",
+                buttonBackgroundColor: "#00433A",
+                buttonIconColor: "#FFFFFF",
+                variant: false,
+                customizations: {
+                    greeting: "Yes",
+                    greetingMessage: "Hai! Tanyakan Disini?",
+                    openByDefault: "No",
+                    pulse: "Yes",
+                    position: "right",
+                    autoOpenChatIn: "0"
+                },
+                isVoice: undefined
+            });
 
-            if (agentContainer.length) {
-                agentContainer.css({ top: '84%' });
-                console.warn("Elemen .embedded-agent-container ditemukan.");
-            } else {
-                console.warn("Elemen .embedded-agent-container tidak ditemukan.");
-            }
-        }, 2000);
+            // Pastikan elemen telah ditambahkan sebelum menerapkan gaya tambahan
+            setTimeout(function() {
+                let agentContainer = document.getElementById("JotformAgent-01956a1913957cf5b064b5234426a6002342");
+                if (agentContainer) {
+                    agentContainer.style.bottom = "20px"; // Sesuaikan posisi jika perlu
+                    agentContainer.style.right = "20px"; // Posisikan di sudut kanan bawah
+                } else {
+                    console.warn("Elemen JotformAgent tidak ditemukan.");
+                }
+            }, 2000);
+        });
 
     </script>
 </body>
