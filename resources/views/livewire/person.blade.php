@@ -12,7 +12,7 @@
                         <h5 class="mb-1">{{ auth()->user()->name }}</h5>
                         <span class="badge bg-warning ms-2 rounded-pill"></span>
                     </div>
-                    <p class="mb-0">Sales</p>
+                    <p class="mb-0">{{session('role')}}</p>
                 </div>
             </div>
         </div>

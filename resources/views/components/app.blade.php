@@ -431,7 +431,7 @@ Kemasan: ${packaging}`;
                 formID: "01956a1913957cf5b064b5234426a6002342",
                 queryParams: ["skipWelcome=1", "maximizable=1"],
                 domain: "https://www.jotform.com",
-                isDraggable: false,
+                isDraggable: true,
                 background: "linear-gradient(180deg, #035C5F 0%, #035C5F 100%)",
                 buttonBackgroundColor: "#00433A",
                 buttonIconColor: "#FFFFFF",
@@ -447,6 +447,18 @@ Kemasan: ${packaging}`;
                 isVoice: undefined
             });
         });
+        //delay 3 detik
+        setTimeout(function() {
+            let agentContainer = $('.embedded-agent-container');
+
+            if (agentContainer.length) {
+                agentContainer.css({ top: '84%' });
+                console.warn("Elemen .embedded-agent-container ditemukan.");
+            } else {
+                console.warn("Elemen .embedded-agent-container tidak ditemukan.");
+            }
+        }, 2000);
+
     </script>
 </body>
 
