@@ -1,4 +1,0 @@
-[12-Feb-2025 23:44:43 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function test() in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/tests/Unit/ExampleTest.php:3
-Stack trace:
-#0 {main}
-  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/tests/Unit/ExampleTest.php on line 3
