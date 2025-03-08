@@ -14,3 +14,7 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/routes/console.php on line 6
+[08-Mar-2025 14:09:53 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/routes/auth.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/syim6353/public_html/cikurai.mandalikaputrabersama.com/routes/auth.php on line 14
