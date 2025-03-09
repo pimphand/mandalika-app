@@ -55,18 +55,12 @@
                             </div>
                         </div>
                     </a>
-                    <!-- Options -->
                     @if (request()->routeIs('customer'))
                         <div class="dropstart chat-options-btn">
                             <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 <i class="bi bi-three-dots-vertical"></i>
                             </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#"><i class="bi bi-mic-mute"></i>Mute</a></li>
-                                <li><a href="#"><i class="bi bi-slash-circle"></i>Ban</a></li>
-                                <li><a href="#"><i class="bi bi-trash"></i>Remove</a></li>
-                            </ul>
                         </div>
                     @endif
                 </li>
