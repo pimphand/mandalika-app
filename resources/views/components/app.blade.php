@@ -422,71 +422,71 @@ Kemasan: ${packaging}`;
             });
         </script>
     @endauth
-    <script src='https://cdn.jotfor.ms/s/umd/latest/for-embedded-agent.js'></script>
-    <script>
-        window.addEventListener("DOMContentLoaded", function() {
-            window.AgentInitializer.init({
-                agentRenderURL: "https://agent.jotform.com/01956a1913957cf5b064b5234426a6002342",
-                rootId: "JotformAgent-01956a1913957cf5b064b5234426a6002342",
-                formID: "01956a1913957cf5b064b5234426a6002342",
-                queryParams: ["skipWelcome=1", "maximizable=1"],
-                domain: "https://www.jotform.com",
-                isDraggable: true,
-                background: "linear-gradient(180deg, #035C5F 0%, #035C5F 100%)",
-                buttonBackgroundColor: "#00433A",
-                buttonIconColor: "#FFFFFF",
-                variant: false,
-                customizations: {
-                    "greeting": "Yes",
-                    "greetingMessage": "Hai! Tanyakan Disini?",
-                    "openByDefault": "No",
-                    "pulse": "Yes",
-                    "position": "right",
-                    "autoOpenChatIn": "0"
-                },
-                isVoice: undefined
-            });
-        });window.addEventListener("DOMContentLoaded", function() {
-            window.AgentInitializer.init({
-                agentRenderURL: "https://agent.jotform.com/01956a1913957cf5b064b5234426a6002342",
-                rootId: "JotformAgent-01956a1913957cf5b064b5234426a6002342",
-                formID: "01956a1913957cf5b064b5234426a6002342",
-                queryParams: ["skipWelcome=1", "maximizable=1"],
-                domain: "https://www.jotform.com",
-                isDraggable: true,
-                background: "linear-gradient(180deg, #035C5F 0%, #035C5F 100%)",
-                buttonBackgroundColor: "#00433A",
-                buttonIconColor: "#FFFFFF",
-                variant: false,
-                customizations: {
-                    greeting: "Yes",
-                    greetingMessage: "Hai! Tanyakan Disini?",
-                    openByDefault: "No",
-                    pulse: "Yes",
-                    position: "right",
-                    autoOpenChatIn: "0"
-                },
-                isVoice: undefined
-            });
+{{--    <script src='https://cdn.jotfor.ms/s/umd/latest/for-embedded-agent.js'></script>--}}
+{{--    <script>--}}
+{{--        window.addEventListener("DOMContentLoaded", function() {--}}
+{{--            window.AgentInitializer.init({--}}
+{{--                agentRenderURL: "https://agent.jotform.com/01956a1913957cf5b064b5234426a6002342",--}}
+{{--                rootId: "JotformAgent-01956a1913957cf5b064b5234426a6002342",--}}
+{{--                formID: "01956a1913957cf5b064b5234426a6002342",--}}
+{{--                queryParams: ["skipWelcome=1", "maximizable=1"],--}}
+{{--                domain: "https://www.jotform.com",--}}
+{{--                isDraggable: true,--}}
+{{--                background: "linear-gradient(180deg, #035C5F 0%, #035C5F 100%)",--}}
+{{--                buttonBackgroundColor: "#00433A",--}}
+{{--                buttonIconColor: "#FFFFFF",--}}
+{{--                variant: false,--}}
+{{--                customizations: {--}}
+{{--                    "greeting": "Yes",--}}
+{{--                    "greetingMessage": "Hai! Tanyakan Disini?",--}}
+{{--                    "openByDefault": "No",--}}
+{{--                    "pulse": "Yes",--}}
+{{--                    "position": "right",--}}
+{{--                    "autoOpenChatIn": "0"--}}
+{{--                },--}}
+{{--                isVoice: undefined--}}
+{{--            });--}}
+{{--        });window.addEventListener("DOMContentLoaded", function() {--}}
+{{--            window.AgentInitializer.init({--}}
+{{--                agentRenderURL: "https://agent.jotform.com/01956a1913957cf5b064b5234426a6002342",--}}
+{{--                rootId: "JotformAgent-01956a1913957cf5b064b5234426a6002342",--}}
+{{--                formID: "01956a1913957cf5b064b5234426a6002342",--}}
+{{--                queryParams: ["skipWelcome=1", "maximizable=1"],--}}
+{{--                domain: "https://www.jotform.com",--}}
+{{--                isDraggable: true,--}}
+{{--                background: "linear-gradient(180deg, #035C5F 0%, #035C5F 100%)",--}}
+{{--                buttonBackgroundColor: "#00433A",--}}
+{{--                buttonIconColor: "#FFFFFF",--}}
+{{--                variant: false,--}}
+{{--                customizations: {--}}
+{{--                    greeting: "Yes",--}}
+{{--                    greetingMessage: "Hai! Tanyakan Disini?",--}}
+{{--                    openByDefault: "No",--}}
+{{--                    pulse: "Yes",--}}
+{{--                    position: "right",--}}
+{{--                    autoOpenChatIn: "0"--}}
+{{--                },--}}
+{{--                isVoice: undefined--}}
+{{--            });--}}
 
-            // Pastikan elemen telah ditambahkan sebelum menerapkan gaya tambahan
-            setTimeout(function() {
-                let agentContainer = document.getElementById("JotformAgent-01956a1913957cf5b064b5234426a6002342");
-                if (agentContainer) {
-                    let embeddedAgent = agentContainer.querySelector('.embedded-agent-container');
-                    if (embeddedAgent) {
-                        embeddedAgent.style.bottom = "60px"; // Sesuaikan posisi jika perlu
-                        embeddedAgent.style.right = "5px"; // Posisikan di sudut kanan bawah
-                    } else {
-                        console.warn("Elemen .embedded-agent-container tidak ditemukan di dalam agentContainer.");
-                    }
-                } else {
-                    console.warn("Elemen JotformAgent tidak ditemukan.");
-                }
-            }, 1000);
-        });
+{{--            // Pastikan elemen telah ditambahkan sebelum menerapkan gaya tambahan--}}
+{{--            setTimeout(function() {--}}
+{{--                let agentContainer = document.getElementById("JotformAgent-01956a1913957cf5b064b5234426a6002342");--}}
+{{--                if (agentContainer) {--}}
+{{--                    let embeddedAgent = agentContainer.querySelector('.embedded-agent-container');--}}
+{{--                    if (embeddedAgent) {--}}
+{{--                        embeddedAgent.style.bottom = "60px"; // Sesuaikan posisi jika perlu--}}
+{{--                        embeddedAgent.style.right = "5px"; // Posisikan di sudut kanan bawah--}}
+{{--                    } else {--}}
+{{--                        console.warn("Elemen .embedded-agent-container tidak ditemukan di dalam agentContainer.");--}}
+{{--                    }--}}
+{{--                } else {--}}
+{{--                    console.warn("Elemen JotformAgent tidak ditemukan.");--}}
+{{--                }--}}
+{{--            }, 1000);--}}
+{{--        });--}}
 
-    </script>
+{{--    </script>--}}
 </body>
 
 </html>
