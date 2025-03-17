@@ -84,7 +84,7 @@ class HomeController extends Controller
             'name' => 'required',
             'phone' => 'required|numeric',
             'address' => 'required',
-//            'owner_address' => 'required',
+            //            'owner_address' => 'required',
             'store_name' => 'required',
             'npwp' => 'nullable',
             'others' => 'nullable',
@@ -95,7 +95,7 @@ class HomeController extends Controller
             'phone.required' => 'Nomor telepon wajib diisi',
             'phone.numeric' => 'Nomor telepon harus berupa angka',
             'address.required' => 'Alamat wajib diisi',
-//            'owner_address.required' => 'Alamat pemilik wajib diisi',
+            //            'owner_address.required' => 'Alamat pemilik wajib diisi',
             'store_name.required' => 'Nama toko wajib diisi',
             'store_photo.required' => 'Foto toko wajib diisi',
             'store_photo.image' => 'Foto toko harus berupa gambar',
@@ -145,6 +145,18 @@ class HomeController extends Controller
         return view('orders');
     }
 
+    public function orderData(Request $request)
+    {
+        $orders = Http::withToken(session('token'))->get(config('app.api_url')
+            . '/api/orders?customer=' . $request->customer
+            . '&product=' . $request->product
+            . '&status=' . $request->status
+            . '&id=' . $request->ids);
+        $orders = $orders->json();
+
+        return view('livewire.list-order', ['orders' => $orders]);
+    }
+
     public function acccount(Request $request): View|Factory|Application
     {
         return view('person');
@@ -166,9 +178,8 @@ class HomeController extends Controller
 
         if ($get->status() == 200) {
             return response()->json(['message' => 'Berhasil mengubah order']);
-        }else{
+        } else {
             return response()->json($get->json(), 422);
         }
-
     }
 }

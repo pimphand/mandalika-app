@@ -22,13 +22,13 @@
                                     href="{{ route('product', $product->id) }}">{{ $product->name }}</a>
                                 <p class="product-title d-block text-truncate _brand_{{ $product->id }} brand">
                                     {{ $product->product->name }}</p>
-                                <p class="_category_{{ $product->id }} category" style="display: none;">
+                                <p class="_category_{{ $product->id }} category">
                                     {{ $product->category }}</p>
-                                <p class="_packagin_{{ $product->id }} packaging" style="display: none;">
+                                <p class="_packagin_{{ $product->id }} packaging">
                                     {{ $product->packaging }}</p>
                                 <!-- Product Price -->
                                 @auth
-                                    <a class="btn btn-success rounded-pill btn-sm" style="background-color: #008e3c;"
+                                    <a class="btn btn-success btn-sm" style="background-color: #008e3c;"
                                         onclick="addCart('{{ $product->id }}')">Masukan Keranjang</a>
                                 @else
                                     <a class="btn btn-success btn-sm saveToCart"
