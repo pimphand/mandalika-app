@@ -24,6 +24,10 @@ Route::middleware('auth')->group(function () {
     Route::get('success/{id}', [\App\Http\Controllers\HomeController::class, 'success'])->name('success');
 
     Route::get('/customer-data', [\App\Http\Controllers\HomeController::class, 'customerData'])->name('customer.data');
+    Route::get('/profile-user', [\App\Http\Controllers\HomeController::class, 'profile'])->name('profile');
+    Route::post('/updateUser', [\App\Http\Controllers\HomeController::class, 'updateUser'])->name('updateUser');
+
+
 });
 
 require __DIR__ . '/auth.php';

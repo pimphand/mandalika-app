@@ -182,4 +182,46 @@ class HomeController extends Controller
             return response()->json($get->json(), 422);
         }
     }
+
+    public function profile()
+    {
+        $getProfile = Http::withToken(session('token'))
+            ->get(config('app.api_url') . '/api/profile');
+
+
+        return view('livewire.person', ['profile' => $getProfile->json()]);
+    }
+
+    public function updateUser(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'address' => 'required',
+            'phone' => 'required',
+            'password' => 'nullable',
+        ], [
+            'name.required' => 'Nama wajib diisi',
+            'address.required' => 'Alamat wajib diisi',
+            'password.required' => 'Password wajib diisi',
+            'photo.image' => 'Foto pemilik harus berupa gambar',
+        ]);
+
+        $post = Http::withToken(session("token"))
+            ->acceptJson();
+
+        if ($request->hasFile('photo')) {
+            $post->attach('photo', file_get_contents($request->file('photo')->path()), 'sales_foto.jpg');
+        }
+
+        $response = $post->post(config('app.api_url') . "/api/profile", [
+            'name' => $request->input('name'),
+            'address' => $request->input('address'),
+            'password' => $request->input('password'),
+            'phone' => $request->input('phone'),
+        ]);
+
+
+        $data = $response->json();
+        return response()->json($data, $response->status());
+    }
 }
