@@ -104,6 +104,16 @@
                                     <input class="form-control" type="text" placeholder="masukan alamat" id="address"
                                         aria-label="Address" required>
                                 </div>
+                                <div class="mb-2">
+                                    <label for="state" class="form-label">Provinsi</label>
+                                    <select class="form-select form-control" name="state" id="state"></select>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="city" class="form-label">Kota</label>
+                                    <select class="form-select form-control" name="city" id="city">
+
+                                    </select>
+                                </div>
 
                                 <button class="btn btn-primary w-100" type="button" onclick="nextStep(2)">Next</button>
                             </div>
@@ -117,13 +127,13 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="store_photo" class="form-label">Store Photo</label>
+                                    <label for="store_photo" class="form-label">Foto Toko</label>
                                     <input class="form-control" type="file" id="store_photo" accept="image/*"
                                         aria-label="Store Photo">
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="owner_photo" class="form-label">Owner Photo</label>
+                                    <label for="owner_photo" class="form-label">Foto KTP</label>
                                     <input class="form-control" type="file" id="owner_photo" accept="image/*"
                                         aria-label="Owner Photo">
                                 </div>
@@ -312,6 +322,8 @@
                     formData.append('name', $('#name').val());
                     formData.append('phone', $('#phone').val());
                     formData.append('address', $('#address').val());
+                    formData.append('city', $('#city').val());
+                    formData.append('state', $('#state').val());
 
                     // Step 2
                     formData.append('store_name', $('#store_name').val());
@@ -321,6 +333,8 @@
                     // Files
                     formData.append('store_photo', $('#store_photo')[0].files[0]);
                     formData.append('owner_photo', $('#owner_photo')[0].files[0]);
+
+
 
                     //csrf token
                     formData.append('_token', '{{ csrf_token() }}');
@@ -381,6 +395,33 @@
                             }
                         }
                     });
+                });
+            });
+
+            $.get('https://www.emsifa.com/api-wilayah-indonesia/api/provinces.json', function ($response) {
+                $.each($response, function (key, value) {
+                    $('#state').append(`<option data-id="${value.id}" value="${value.name}">${value.name}</option>`);
+                });
+            });
+
+            $('#state').change(function (e) {
+                const stateId = $('#state option:selected').data('id'); // Get selected option's data-id
+                console.log(stateId);
+                // Clear existing options
+                $('#city').empty();
+
+                $.get(`https://www.emsifa.com/api-wilayah-indonesia/api/regencies/${stateId}.json`, function ($response) {
+                    // Check if there are any cities returned
+                    if ($response && $response.length) {
+                        $.each($response, function (key, value) {
+                            $('#city').append(`<option data-id="${value.id}" value="${value.name}">${value.name}</option>`);
+                        });
+                    } else {
+                        $('#city').append('<option>No cities available</option>');
+                    }
+                }).fail(function () {
+                    // Handle request failure
+                    $('#city').append('<option>Failed to load cities</option>');
                 });
             });
         </script>

@@ -90,6 +90,8 @@ class HomeController extends Controller
             'others' => 'nullable',
             'store_photo' => 'required|image',
             'owner_photo' => 'required|image',
+            'city' => 'required',
+            'state' => 'required',
         ], [
             'name.required' => 'Nama wajib diisi',
             'phone.required' => 'Nomor telepon wajib diisi',
@@ -115,6 +117,8 @@ class HomeController extends Controller
                 'owner_address' => $request->input('owner_address'),
                 'store_name' => $request->input('store_name'),
                 'npwp' => $request->input('npwp'),
+                'city' => $request->input('city'),
+                'state' => $request->input('state'),
                 'others' => $request->input('others'),
             ]);
 
