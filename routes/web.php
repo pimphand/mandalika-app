@@ -13,6 +13,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/orders/{id}', [\App\Http\Controllers\HomeController::class, 'updateOrder'])->name('orders.update');
 
     Route::get('/orders', [\App\Http\Controllers\HomeController::class, 'listOrders'])->name('orders');
+    Route::get('/orderData', [\App\Http\Controllers\HomeController::class, 'orderData'])->name('orderData');
 
     Route::get('/acccount', [\App\Http\Controllers\HomeController::class, 'acccount'])->name('acccount');
 
@@ -23,6 +24,10 @@ Route::middleware('auth')->group(function () {
     Route::get('success/{id}', [\App\Http\Controllers\HomeController::class, 'success'])->name('success');
 
     Route::get('/customer-data', [\App\Http\Controllers\HomeController::class, 'customerData'])->name('customer.data');
+    Route::get('/profile-user', [\App\Http\Controllers\HomeController::class, 'profile'])->name('profile');
+    Route::post('/updateUser', [\App\Http\Controllers\HomeController::class, 'updateUser'])->name('updateUser');
+
+
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

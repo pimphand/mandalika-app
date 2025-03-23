@@ -84,7 +84,7 @@ class HomeController extends Controller
             'name' => 'required',
             'phone' => 'required|numeric',
             'address' => 'required',
-//            'owner_address' => 'required',
+            //            'owner_address' => 'required',
             'store_name' => 'required',
             'npwp' => 'nullable',
             'others' => 'nullable',
@@ -97,7 +97,7 @@ class HomeController extends Controller
             'phone.required' => 'Nomor telepon wajib diisi',
             'phone.numeric' => 'Nomor telepon harus berupa angka',
             'address.required' => 'Alamat wajib diisi',
-//            'owner_address.required' => 'Alamat pemilik wajib diisi',
+            //            'owner_address.required' => 'Alamat pemilik wajib diisi',
             'store_name.required' => 'Nama toko wajib diisi',
             'store_photo.required' => 'Foto toko wajib diisi',
             'store_photo.image' => 'Foto toko harus berupa gambar',
@@ -149,6 +149,18 @@ class HomeController extends Controller
         return view('orders');
     }
 
+    public function orderData(Request $request)
+    {
+        $orders = Http::withToken(session('token'))->get(config('app.api_url')
+            . '/api/orders?customer=' . $request->customer
+            . '&product=' . $request->product
+            . '&status=' . $request->status
+            . '&id=' . $request->ids);
+        $orders = $orders->json();
+
+        return view('livewire.list-order', ['orders' => $orders]);
+    }
+
     public function acccount(Request $request): View|Factory|Application
     {
         return view('person');
@@ -170,9 +182,50 @@ class HomeController extends Controller
 
         if ($get->status() == 200) {
             return response()->json(['message' => 'Berhasil mengubah order']);
-        }else{
+        } else {
             return response()->json($get->json(), 422);
         }
+    }
 
+    public function profile()
+    {
+        $getProfile = Http::withToken(session('token'))
+            ->get(config('app.api_url') . '/api/profile');
+
+
+        return view('livewire.person', ['profile' => $getProfile->json()]);
+    }
+
+    public function updateUser(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'address' => 'required',
+            'phone' => 'required',
+            'password' => 'nullable',
+        ], [
+            'name.required' => 'Nama wajib diisi',
+            'address.required' => 'Alamat wajib diisi',
+            'password.required' => 'Password wajib diisi',
+            'photo.image' => 'Foto pemilik harus berupa gambar',
+        ]);
+
+        $post = Http::withToken(session("token"))
+            ->acceptJson();
+
+        if ($request->hasFile('photo')) {
+            $post->attach('photo', file_get_contents($request->file('photo')->path()), 'sales_foto.jpg');
+        }
+
+        $response = $post->post(config('app.api_url') . "/api/profile", [
+            'name' => $request->input('name'),
+            'address' => $request->input('address'),
+            'password' => $request->input('password'),
+            'phone' => $request->input('phone'),
+        ]);
+
+
+        $data = $response->json();
+        return response()->json($data, $response->status());
     }
 }

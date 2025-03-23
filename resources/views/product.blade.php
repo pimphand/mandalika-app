@@ -133,14 +133,4 @@
             }
         </script>
     @endpush
-{{--    @push('meta')--}}
-{{--        <meta property="og:title" content="{{ $product['brand'] }} : {{ $product['data']['name'] }}">--}}
-{{--        <meta property="og:description" content="{{ $product['data']['description'] }}">--}}
-{{--        <meta property="og:image" content="{{ config('app.api_url') }}/storage/{{ $product['data']['image'] }}">--}}
-{{--        <meta property="og:type" content="product">--}}
-{{--        <meta property="og:site_name" content="{{ config('app.name') }}">--}}
-{{--        <meta property="og:category" content="{{ $product['data']['category'] }}">--}}
-{{--        <meta property="og:brand" content="{{ $product['data']['brand'] }}">--}}
-{{--    @endpush--}}
-
 </x-app>

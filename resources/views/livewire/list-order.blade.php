@@ -1,83 +1,59 @@
 <div>
-    <div class="container">
-        <div class="card">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="form-group mb-3">
-                            <input class="form-control form-control-clicked" wire:model.live.debounce.300ms="customer"
-                                type="text" placeholder="Cari Customer">
-                        </div>
-                    </div>
-                </div>
+    <div class="accordion accordion-style-five" id="accordionStyle5">
+        <!-- Single Accordion -->
+        @php
+            $status = [
+                'pending' => 'primary',
+                'process' => 'warning',
+                'success' => 'success',
+                'cancel' => 'danger',
+                'done' => 'success',
+            ];
 
-                <div class="mb-3">
-                    @if (session('role') == 'sales')
-                        <span wire:click="$set('status', 'pending')" style="color: #fff;" data-bs-toggle="tooltip"
-                            data-bs-placement="right"
-                            data-bs-original-title="Orderan yg baru di ajukan oleh sales namun blm di approve oleh admin"
-                            class="btn mb-1 badge bg-primary status-btn" onclick="setActive(this)">Pending</span>
-                    @endif
-                    <span wire:click="$set('status', 'process')" style="color: #fff;" data-bs-toggle="tooltip"
-                        data-bs-placement="right"
-                        data-bs-original-title="Orderan yg telah di approve oleh admin dan akan di kirimkan ke toko"
-                        class="btn mb-1 badge bg-warning status-btn" onclick="setActive(this)">Proses</span>
+            $statusId = [
+                'pending' => 'Pending',
+                'process' => 'Proses',
+                'success' => 'Selesai',
+                'cancel' => 'Batal',
+                'done' => 'Selesai',
+            ];
+        @endphp
+        {{-- session --}}
+        @if (session()->has('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>{{ session('success') }}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+        @if (session()->has('error'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>{{ session('error') }}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
 
-                    <span wire:click="$set('status', 'success')" style="color: #fff;" data-bs-placement="right"
-                        data-bs-original-title="Orderan yg telah berhasil terkirim ke toko (barang telah sampai ke Costumer) pada tahap orderan sukses disini akan tercantum harga beserta total penjualan nya"
-                        class="btn mb-1 badge bg-success status-btn" onclick="setActive(this)">Sukses</span>
-                    <span wire:click="$set('status', 'cancel')" style="color: #fff;"
-                        class="btn mb-1 badge bg-danger status-btn" onclick="setActive(this)">Batal</span>
+        @forelse ($orders['data'] as $order)
 
-                </div>
-                <div class="accordion accordion-style-five" id="accordionStyle5">
-                    <!-- Single Accordion -->
-                    @php
-                        $status = [
-                            'pending' => 'primary',
-                            'process' => 'warning',
-                            'success' => 'success',
-                            'cancel' => 'danger',
-                            'done' => 'success',
-                        ];
-
-                        $statusId = [
-                            'pending' => 'Pending',
-                            'process' => 'Proses',
-                            'success' => 'Selesai',
-                            'cancel' => 'Batal',
-                            'done' => 'Selesai',
-                        ];
-                    @endphp
-                    {{-- session --}}
-                    @if (session()->has('success'))
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            <strong>{{ session('success') }}</strong>
-                            <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                aria-label="Close"></button>
-                        </div>
-                    @endif
-                    @if (session()->has('error'))
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            <strong>{{ session('error') }}</strong>
-                            <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                aria-label="Close"></button>
-                        </div>
-                    @endif
-
-                    @forelse ($orders['data'] as $order)
-                        <div class="accordion-item accordion-bg-{{ $status[$order['status']] }}">
-                            <div class="accordion-header" id="{{ $order['id'] }}">
-                                <h6 data-bs-toggle="collapse" data-bs-target="#accordionStyleFive{{ $order['id'] }}"
-                                    aria-expanded="false" aria-controls="accordionStyleFive{{ $order['id'] }}"
-                                    class="collapsed">
-                                    <i class="bi bi-plus-lg"></i> {{ $order['id'] }} -
-                                    {{ $order['customer']['store_name'] }}
-                                </h6>
-                                <div class="accordion-collapse collapse" id="accordionStyleFive{{ $order['id'] }}"
-                                    aria-labelledby="{{ $order['id'] }}" data-bs-parent="#accordionStyle5"
-                                    style="">
-                                    <table class="table table-bordered ">
+            <div class="accordion-item accordion-bg-{{ $status[$order['status']] }}">
+                <div class="accordion-header" id="{{ $order['id'] }}">
+                    <span class="btn btn-primary" type="button" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop-{{ $order['id'] }}">
+                        {{ $order['id'] }} -
+                        {{ $order['customer']['store_name'] }}
+                    </span>
+                    <div class="modal fade" id="staticBackdrop-{{ $order['id'] }}" data-bs-backdrop="static"
+                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h6 class="modal-title" id="staticBackdropLabel">{{ $order['id'] }} -
+                                        {{ $order['customer']['store_name'] }}</h6>
+                                    <button class="btn btn-close p-1 ms-auto" type="button" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <table class="table table-bordered">
                                         <tbody>
                                             <tr>
                                                 <td>
@@ -253,66 +229,65 @@
                                 </div>
                             </div>
                         </div>
-                    @empty
-                        <div>
-                            <h6 class="text-center">Data tidak ditemukan</h6>
-                        </div>
-                    @endforelse
+                    </div>
 
                 </div>
-
-                @if (count($orders['data']) >= 10)
-                    <!-- Pagination -->
-                    <div class="d-flex justify-content-center mt-4">
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination">
-                                <!-- Previous Page Link -->
-                                @if (!is_null($orders['links']['prev']))
-                                    <li class="page-item">
-                                        <a class="page-link" href="{{ $orders['links']['prev'] }}"
-                                            aria-label="Previous">
-                                            <span aria-hidden="true">&laquo;</span>
-                                        </a>
-                                    </li>
-                                @else
-                                    <li class="page-item disabled">
-                                        <span class="page-link" aria-hidden="true">&laquo;</span>
-                                    </li>
-                                @endif
-
-                                <!-- Page Number Links -->
-                                @foreach ($orders['meta']['links'] as $link)
-                                    @if ($link['active'])
-                                        <li class="page-item active" aria-current="page">
-                                            <span class="page-link">{{ $link['label'] }}</span>
-                                        </li>
-                                    @else
-                                        <li class="page-item">
-                                            <a class="page-link" href="{{ $link['url'] }}">{{ $link['label'] }}</a>
-                                        </li>
-                                    @endif
-                                @endforeach
-
-                                <!-- Next Page Link -->
-                                @if (!is_null($orders['links']['next']))
-                                    <li class="page-item">
-                                        <a class="page-link" href="{{ $orders['links']['next'] }}"
-                                            aria-label="Next">
-                                            <span aria-hidden="true">&raquo;</span>
-                                        </a>
-                                    </li>
-                                @else
-                                    <li class="page-item disabled">
-                                        <span class="page-link" aria-hidden="true">&raquo;</span>
-                                    </li>
-                                @endif
-                            </ul>
-                        </nav>
-                    </div>
-                @endif
             </div>
-        </div>
+        @empty
+            <div>
+                <h6 class="text-center">Data tidak ditemukan</h6>
+            </div>
+        @endforelse
+
     </div>
+
+    @if (count($orders['data']) >= 10)
+        <!-- Pagination -->
+        <div class="d-flex justify-content-center mt-4">
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <!-- Previous Page Link -->
+                    @if (!is_null($orders['links']['prev']))
+                        <li class="page-item">
+                            <a class="page-link" href="{{ $orders['links']['prev'] }}" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                    @else
+                        <li class="page-item disabled">
+                            <span class="page-link" aria-hidden="true">&laquo;</span>
+                        </li>
+                    @endif
+
+                    <!-- Page Number Links -->
+                    @foreach ($orders['meta']['links'] as $link)
+                        @if ($link['active'])
+                            <li class="page-item active" aria-current="page">
+                                <span class="page-link">{{ $link['label'] }}</span>
+                            </li>
+                        @else
+                            <li class="page-item">
+                                <a class="page-link" href="{{ $link['url'] }}">{{ $link['label'] }}</a>
+                            </li>
+                        @endif
+                    @endforeach
+
+                    <!-- Next Page Link -->
+                    @if (!is_null($orders['links']['next']))
+                        <li class="page-item">
+                            <a class="page-link" href="{{ $orders['links']['next'] }}" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    @else
+                        <li class="page-item disabled">
+                            <span class="page-link" aria-hidden="true">&raquo;</span>
+                        </li>
+                    @endif
+                </ul>
+            </nav>
+        </div>
+    @endif
 </div>
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>

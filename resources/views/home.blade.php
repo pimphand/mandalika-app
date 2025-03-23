@@ -49,12 +49,12 @@
 
                     @auth
                         <div class="col-3">
-                            <div class="feature-card mx-auto text-center">
+                            <a class="feature-card mx-auto text-center" href="{{ route('acccount') }}">
                                 <div class="card mx-auto bg-gray">
                                     <img loading="lazy" src="{{ asset('icon/ic_omset.png') }}" alt="">
                                 </div>
                                 <p class="mb-0">Omset</p>
-                            </div>
+                            </a>
                         </div>
                     @endauth
 
